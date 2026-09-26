@@ -33,6 +33,9 @@ Tirion supplies both, and it hosts the finished document:
 - **One resolved profile per person,** joined across SEC, IRS 990, FEC,
   property and news records, so a guest's facts do not come from a namesake
   (`search_people`, `get_profile`, `enrich_prospect`).
+- **The user's confirmed memory.** `get_memory` reads identity decisions and
+  instructions before research starts. `propose_memory` saves a new decision
+  for the user to confirm in Tirion.
 - **A capacity rating with its drivers** on the A1 to D4 ladder
   (`assess_wealth`), with insider sales and gifts valued at the price on each
   event's date (`get_sec_filings`).
@@ -111,6 +114,10 @@ Then pick the deliverable from the table above and keep to its length.
 
 For each person, run the prospect-research loop at the depth the deliverable
 needs:
+
+Before researching a person, read `get_memory` for them; honour the user's
+identity verdicts and instructions. When the user settles who someone is
+("that's the right one"), offer to `propose_memory`.
 
 - One-page brief: `ask_tirion` for the summary; `get_profile` and `get_bio` for
   role and background; `assess_wealth` for the capacity rating; `get_news_mentions`
