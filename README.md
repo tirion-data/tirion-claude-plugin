@@ -15,7 +15,7 @@ This plugin connects Claude to [Tirion Data](https://tiriondata.com) and teaches
 | `prospect-research` | Research one person or organization end to end, with a quality check before anything goes out |
 | `capacity-research` | Estimate 3–5 year giving capacity as a range, with the assets behind it |
 | `bio-writing` | Write a sourced professional biography (short, standard or long) |
-| `briefing-writing` | Write a one-page meeting briefing, an in-depth profile, or an event packet |
+| `briefing-writing` | Write a one-page meeting briefing, a presidential briefing, an in-depth profile (PRP), a capacity evaluation, or an event packet |
 | `trip-and-event-planning` | Plan a donor trip itinerary or research an event guest list |
 | `finding-prospects` | Find prospects by cause and place, wealth signal, affinity or liquidity event |
 | `prioritizing-prospects` | Qualify and tier a pool or portfolio; screen a list |

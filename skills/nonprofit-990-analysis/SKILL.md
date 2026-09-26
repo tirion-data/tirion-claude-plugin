@@ -183,7 +183,7 @@ Hand off:
 
 ```markdown
 # Nonprofit and foundation findings: <Full Name>
-Prepared by <name>, <date>. Purpose: philanthropy section of a prospect review.
+Prepared by <name>, with AI assistance. Reviewed by <name>, <date>. Purpose: philanthropy section of a prospect review.
 
 **Summary.** <2-4 sentences: the family foundation (assets, grants, fiscal
 year), top causes and geography, the person's board roles, and the best

@@ -31,8 +31,8 @@ the list is set.
 ```markdown
 # <Event or trip name>: briefing packet
 **Confidential: for internal use**
-Prepared <YYYY-MM-DD> by <name or team> for <reader(s)>.
-Purpose: prepare <our attendees> for <event> on <date> at <place>.
+Prepared <YYYY-MM-DD> by <researcher or team>, with AI assistance. Reviewed by <name>, <date>.
+For <reader(s)>. Purpose: prepare <our attendees> for <event> on <date> at <place>.
 
 ## Summary
 <3-5 sentences: who is in the room and why it matters; the top 3 conversations

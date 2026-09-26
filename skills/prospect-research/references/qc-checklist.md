@@ -64,7 +64,9 @@ normal. Fix it and run the list again.
 
 | Check | Fix when it fails |
 |---|---|
-| Title, date, "Prepared by", and what the document is for, at the top. | Add them. |
+| Title, date, "Prepared by ... with AI assistance", "Reviewed by" (a named person), and what the document is for, at the top. | Add them. If no person has reviewed it, mark it "draft, not yet reviewed". |
+| Facts from the organization's own records (giving, pledges, contact history, officer rating, self-reported statements) are attributed to the officer who supplied them, and none were invented. | Attribute or remove. Leave a marked placeholder for what the user did not provide. |
+| Research capacity, the organization's rating and the officer's expected next gift are shown separately with their horizons. | Split them. Never merge or average them. |
 | One-paragraph summary at the top that leads with the conclusion. | Move the conclusion up. |
 | A recommended next step. | Add one: who, what, by when. |
 | Gaps are listed with what would close each one. | Add a "What we do not know" section. |

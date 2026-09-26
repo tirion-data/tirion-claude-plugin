@@ -132,7 +132,7 @@ version below it.
 
 ```markdown
 # <Full name>: biography (<short | standard | long>)
-Prepared <date> by <name or team>. For <use: event program / meeting brief / board slate>.
+Prepared <date> by <name or team>, with AI assistance. Reviewed by <name>, <date>. For <use: event program / meeting brief / board slate>.
 Facts current as of <date>.
 
 <Bio text, with bracketed source numbers>

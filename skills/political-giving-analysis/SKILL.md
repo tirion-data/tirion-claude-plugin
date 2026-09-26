@@ -148,7 +148,7 @@ Hand off:
 
 ```markdown
 # Political giving: <Full Name>
-Prepared by <name>, <date>. Purpose: internal capacity evidence. Not for outreach.
+Prepared by <name>, with AI assistance. Reviewed by <name>, <date>. Purpose: internal capacity evidence. Not for outreach.
 
 **Summary.** <2-3 sentences: total federal giving since <year>, largest gifts,
 whether the donor maxes out, and what it suggests about discretionary cash.>

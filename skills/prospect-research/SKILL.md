@@ -181,8 +181,11 @@ For a chat answer, use this order:
 7. Sources (numbered: record, date, URL).
 
 For a document, use the templates in briefing-writing. Every document has a title,
-date, "Prepared by", a statement of what it is for, a summary at the top, and a
-numbered Sources list. Offer a Word or PDF version when the environment supports
+date, "Prepared by ... with AI assistance", "Reviewed by" (a named person), a
+statement of what it is for, a summary at the top, and a numbered Sources list.
+Ask the user for the organization's own records (giving, pledges, contact
+history, officer rating) and attribute them; they make the document
+decision-ready. Offer a Word or PDF version when the environment supports
 it.
 
 ## QC checklist (every deliverable)

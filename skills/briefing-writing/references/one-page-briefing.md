@@ -7,8 +7,8 @@ nothing sourced to say.
 ```markdown
 # Meeting briefing: <Full name>
 **Confidential: for internal use**
-Prepared <YYYY-MM-DD> by <name or team> for <reader, title>.
-Purpose: prepare <reader> for <meeting type> on <date> at <place>.
+Prepared <YYYY-MM-DD> by <researcher or team>, with AI assistance. Reviewed by <name>, <date>.
+For <reader, title>. Purpose: prepare <reader> for <meeting type> on <date> at <place>.
 
 ## Summary
 <4-5 sentences: who they are; capacity range and main driver; strongest tie to
@@ -27,9 +27,10 @@ step.>
 <3-4 lines: current role and organization; career highlights; education. Cite.>
 
 ## Capacity
-**<Tier label>, <low> to <high> over 3-5 years.** Confidence: <level>.
+**Major gift capacity: <low> to <high> (tier), over 3-5 years, based on <indicators>.** Confidence: <level>.
 Drivers: <one line each, with record and date>.
 Unknown: <what, and what would settle it>.
+Organization's rating: <if provided, with date>; officer's expected next gift: <range, or "not yet set">.
 
 ## Recent events (last 12-24 months)
 - <YYYY-MM-DD>: <event> [n]
@@ -49,8 +50,9 @@ Unknown: <what, and what would settle it>.
 - <sensitive topics, stated neutrally, sourced; or "None known.">
 
 ## Our history with them
-<Past gifts, contacts, and open proposals from the organization's own records.
-Provided by <officer>; not from public sources.>
+<Household giving total, largest gift and year, open pledges, the last two or
+three contacts with dates, and any declined ask. From the organization's own
+records. Provided by <officer>; not from public sources.>
 
 ## Sources
 1. <Record or publication>, <date>. <URL>
@@ -59,6 +61,8 @@ Provided by <officer>; not from public sources.>
 Notes:
 
 - Put the ask in the Meeting table and the Summary. Readers look for it first.
+- For a president who wants three to six pages, use
+  [presidential-briefing.md](presidential-briefing.md).
 - Talking points connect their interest to a specific need. Three is enough.
 - "Our history with them" comes from the user. If it was not provided, write
   "Not provided. Ask <officer> before the meeting."

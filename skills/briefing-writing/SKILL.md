@@ -2,17 +2,17 @@
 name: briefing-writing
 description: >-
   Write print-ready briefings on prospects. Use it for "brief me before my
-  meeting with X", "one-pager on X for the president", "write a prospect
-  research profile", "full PRP on X", "briefing book for the gala", "who is in
-  the room at Thursday's dinner", "trip briefing for our New York visits", or
-  "cards for each attendee". It produces (a) a one-page pre-meeting briefing,
-  (b) an in-depth individual briefing or prospect research profile (PRP), or
-  (c) an event or trip packet with one card per attendee and an overview of
-  who is in the room and why it matters. Attendees who cannot be identified
-  with confidence are listed as unconfirmed, with the question that would
-  settle each. It uses prospect-research for the research loop,
-  capacity-research for the capacity section, bio-writing for the biography,
-  and trip-and-event-planning for choosing whom to see. Ethics:
+  meeting with X", "one-pager on X for the president", "presidential
+  briefing", "write a prospect research profile", "full PRP on X", "capacity
+  evaluation on X", "briefing book for the gala", "who is in the room at
+  Thursday's dinner", or "cards for each attendee". It produces a one-page
+  pre-meeting briefing, a 3-6 page presidential briefing, a full prospect
+  research profile (PRP), a 1-2 page capacity evaluation, or an event or trip
+  packet with one card per attendee. Attendees who cannot be identified with
+  confidence are listed as unconfirmed, with the question that would settle
+  each. It uses prospect-research for the research loop, capacity-research
+  for the capacity section, bio-writing for the biography, and
+  trip-and-event-planning for choosing whom to see. Ethics:
   ethics-and-privacy.
 ---
 
@@ -30,8 +30,10 @@ forwarded; write it so the prospect could read it without embarrassment.
 
 | Request | Deliverable | Template |
 |---|---|---|
-| A meeting, call or visit with one person soon | One-page pre-meeting briefing | [references/one-page-briefing.md](references/one-page-briefing.md) |
+| A meeting, call or visit with one person soon; the reader wants one page | One-page pre-meeting briefing | [references/one-page-briefing.md](references/one-page-briefing.md) |
+| A president, dean or board chair meeting one prospect; a new leader inheriting a relationship | Presidential briefing, 3-6 pages: meeting section plus the profile | [references/presidential-briefing.md](references/presidential-briefing.md) |
 | A new top prospect, a portfolio review, a solicitation plan | In-depth briefing / prospect research profile (PRP) | [references/prp-template.md](references/prp-template.md) |
+| "What could X give"; rating a unit's pool; refreshing a stale rating | Capacity evaluation, 1-2 pages, ending in the one-line capacity statement | [references/capacity-evaluation.md](references/capacity-evaluation.md) |
 | A gala, dinner, reception, board retreat, or a multi-stop trip | Event or trip packet: overview plus one card per attendee | [references/event-packet.md](references/event-packet.md) |
 
 Hand off:
@@ -56,8 +58,16 @@ Hand off:
   step with an owner and a date.
 - Every material fact is cited: record and date in a numbered Sources list.
 - States what is unknown and what would settle it.
-- Header on every document: title, date, "Prepared by", "Prepared for", purpose,
-  and "Confidential: for internal use".
+- Header on every document: title, date, "Prepared by ... with AI assistance",
+  "Reviewed by" (a named person, before the document is used), "Requested by",
+  purpose, and "Confidential: for internal use". A briefing that no person has
+  reviewed is a draft.
+- Research capacity and the officer's expected next gift are shown side by
+  side and never merged. Capacity is written in the one-line form: "Major gift
+  capacity: low to high (tier), based on <indicator>."
+- Giving to the organization, open pledges, the contact history and the
+  organization's own rating come from the user's records, attributed to the
+  officer who supplied them. They are never invented.
 
 ## Method
 
@@ -68,9 +78,11 @@ Ask, or infer from the request:
 - Who reads it (president, dean, gift officer, board volunteer)?
 - What is the meeting or event, when, and where?
 - What is the goal (introduction, cultivation, ask, thank-you, stewardship)?
-- What does the organization already know (past gifts, contact history, the
-  officer's notes)? Ask the user; Tirion holds public records, not the
-  organization's own donor records.
+- What does the organization already know? Ask the user for: giving history
+  by household member and vehicle, open pledges and proposals, contact reports,
+  the assigned officer, and any officer or overall rating. Tirion holds public
+  records, not the organization's own donor records. These sections are what
+  make a profile decision-ready; ask for them before you write.
 
 Then pick the deliverable from the table above and keep to its length.
 
@@ -91,6 +103,11 @@ needs:
   `get_recognitions`. Then fill gaps from public sources (SEC EDGAR, county
   assessor and recorder sites, ProPublica Nonprofit Explorer, FEC.gov, donor
   rolls and annual reports).
+- Presidential briefing: PRP depth, then cut to what the meeting needs.
+- Capacity evaluation: the wealth tools above (`assess_wealth`,
+  `get_property_portfolio`, `get_sec_filings`, `search_foundations`,
+  `get_political_giving`, `get_recognitions`) and the capacity-research method.
+  No biography beyond one paragraph.
 - Event packet: the one-page depth for the key guests, a short card depth for the
   rest. Use `bulk_enrich` to screen a long guest list first.
 
@@ -102,10 +119,14 @@ conclusion in four or five sentences, the research is not done.
 The summary answers, in order:
 
 1. Who they are, in one line.
-2. Capacity range and its main driver (from capacity-research).
-3. Their strongest tie to us and their main philanthropic interests.
-4. Anything sensitive, and the main unknowns.
-5. The recommended ask or next step.
+2. Capacity range and its main driver (from capacity-research), in the
+   one-line form.
+3. Their relationship with us and the most recent contact (from the
+   organization's records).
+4. Their strongest tie to us and their main philanthropic interests.
+5. Anything sensitive, and the main unknowns.
+6. The recommended ask or next step, and the officer's expected next gift if
+   one was given.
 
 ### 4. Build the sections
 
@@ -139,6 +160,12 @@ it.
 
 - **Biography instead of strategy.** A CV does not prepare anyone for a
   conversation. Fix: objectives, talking points and the ask come first.
+- **A profile with no family, giving or contact sections.** Research shops
+  treat family, giving to the organization and the contact history as core
+  sections. Fix: ask the user for the organization's records and include them,
+  attributed; leave a marked placeholder if they are not provided.
+- **Merging the research rating with the officer's rating.** Fix: show both
+  with dates. A gap of more than one tier is a finding, not an error.
 - **Too long for the reader.** A president will read one page. Fix: one page, with
   a link to the full profile.
 - **Wealth detail in a volunteer's card.** Fix: volunteers get role, interests,

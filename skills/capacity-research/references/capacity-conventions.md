@@ -22,6 +22,12 @@ label and its band in deliverables.
 Each tier is about double the one below. When evidence spans two tiers, report
 both ("B1 to A5").
 
+Many organizations keep their own rating codes (for example a letter scale whose
+top codes are split into finer bands). When the user names one, map the dollar
+range to their code and show both: "B1 ($2.5M-$4.9M); your scale: A6". Always
+write the dollar range next to the code, so a reader outside the research team
+can read it.
+
 ## 2. Net worth to capacity
 
 | Convention | Use |
@@ -194,4 +200,17 @@ range chart, where each level is about half the level above.
 
 Keep the research rating and any officer rating side by side. When they differ by
 more than a tier, say so. The gap is information: the officer may know about
-wealth or constraints that records do not show.
+wealth or constraints that records do not show. Research ratings often sit one
+to several tiers above officer ratings; that is normal, because research rates
+what the person could give and the officer rates what they expect.
+
+Three figures, three meanings. Keep them apart in every document:
+
+| Figure | Meaning | Who sets it |
+|---|---|---|
+| Research capacity | What the person could give over 3-5 years, from public evidence | Research |
+| Officer or overall rating | The organization's view, from the relationship | The officer or the organization |
+| Expected next gift | What the officer expects the next gift to be, over the campaign or plan period | The officer |
+
+The ask range in this skill sits between research capacity and the expected
+next gift. State the time horizon for each figure.

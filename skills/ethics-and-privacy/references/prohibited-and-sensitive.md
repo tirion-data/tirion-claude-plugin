@@ -20,6 +20,7 @@
 ## Methods that are never acceptable
 
 - Pretexting: calling or messaging under a false identity to get information.
+- Using social media under a false or hidden identity, or in a way that intrudes on a person's privacy. Apra's principles ask researchers to be honest about their identity and role when using social media in their work.
 - Scraping content behind a login, or breaking a site's terms of use.
 - Buying data from a broker that cannot name its sources.
 - Asking a prospect's friend, employee or family member for private information under a false purpose.

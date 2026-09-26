@@ -142,6 +142,16 @@ the record, the date, and whether the person controls it.
 - Giving shows inclination. Do not let giving history inflate the capacity figure
   itself. Use it in the ask range.
 
+**Stated by the prospect** (the organization's own records; ask the user)
+
+- A questionnaire answer ("family net worth 10 to 49 million"), a remark in a
+  contact report ("the pledge was a starting point"), a declined ask with the
+  reason. Research shops give these real weight: the prospect is the most
+  direct source there is.
+- Label each as self-reported, with the officer and date. Do not treat it as
+  verified. Check it against the public record and say whether it fits.
+- Tirion does not hold these. If the user has none, say so in the unknowns.
+
 **Political giving** (`get_political_giving`, `get_fec_committee`; FEC.gov)
 
 - FEC itemizes a donor's contributions once they pass 200 dollars (per election
@@ -175,6 +185,10 @@ List them on their own line.
 - **Moderate**: two or three independent asset signals.
 - **Lower**: one signal, such as real estate alone, or title and employer alone.
 
+A rating that rests only on a screening vendor's output, checked for identity
+but not researched, is a screened rating. Say "screened, not researched" so
+nobody treats it as an evaluation.
+
 Real estate alone makes a floor with low confidence and a wide range. A
 high-status role with little visible wealth is not proof of modest means. Wealth
 often sits in private assets.
@@ -196,7 +210,7 @@ not called net worth; each asset counted once; every figure dated.
 ## Output template
 
 ```markdown
-**Capacity (3-5 years): <tier label>, <low> to <high> dollars.** Confidence: <higher | moderate | lower>, because <reason>.
+**Major gift capacity: <low> to <high> (tier), over 3-5 years, based on <indicators>.** Confidence: <higher | moderate | lower>, because <reason>.
 
 **Drivers**
 | Asset or income | Value | Basis | Record and date |
@@ -208,8 +222,15 @@ not called net worth; each asset counted once; every figure dated.
 **Excluded or unknown:** <what, and what would settle it>.
 **Liquidity and timing:** <what is liquid now; what depends on a future event>.
 
+**Organization's rating:** <officer or overall rating with its date, if the user gave one; else "none provided">. <Say if it differs from the research rating by more than a tier. Do not merge them.>
+
 **Ask range: <low> to <high> dollars**, because <inclination and affinity evidence>. Suggested timing: <when and why>.
+**Expected next gift (officer view):** <the officer's own expectation over the campaign or plan period, if given; else "not yet set">.
 ```
+
+The first line is the form research shops use: one sentence, the range, the
+tier, the horizon, and "based on" the indicators that drove it. A reader who
+reads only that line gets the conclusion and its basis.
 
 Write dollar amounts in the deliverable with a dollar sign as usual.
 
@@ -228,5 +249,11 @@ Write dollar amounts in the deliverable with a dollar sign as usual.
 - **Stale holdings.** Fix: date every holding; mark departed insiders.
 - **Giving history inflating capacity.** Fix: use giving in the ask range, not in
   the capacity figure.
+- **Ignoring what the prospect said.** A questionnaire answer or a remark to an
+  officer is direct evidence. Fix: ask the user for it, label it self-reported,
+  and check it against the record.
+- **Capacity presented as the expected gift.** Research capacity is what they
+  could give. The officer's expected next gift is a separate, usually lower,
+  figure. Fix: show both, with the horizon for each.
 - **Real estate as the whole story.** Fix: treat it as a floor and look for the
   private assets above it.

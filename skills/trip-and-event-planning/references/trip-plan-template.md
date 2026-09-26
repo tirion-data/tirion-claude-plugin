@@ -5,7 +5,7 @@ Copy this, fill it in, and delete the guidance lines in brackets.
 ```markdown
 # Trip plan: [traveller name and title] to [city / region]
 **Dates:** [start] to [end]
-**Prepared by:** [name], [office] | **Date prepared:** [date]
+**Prepared by:** [name], [office], with AI assistance | **Reviewed by:** [name] | **Date prepared:** [date]
 **Confidential: for internal use by [organization] only.**
 
 ## Purpose

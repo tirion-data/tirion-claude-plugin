@@ -203,7 +203,7 @@ Hand off:
 
 ```markdown
 # SEC findings: <Full Name>
-Prepared by <name>, <date>. Purpose: SEC section of a prospect review.
+Prepared by <name>, with AI assistance. Reviewed by <name>, <date>. Purpose: SEC section of a prospect review.
 
 **Summary.** <2-4 sentences: role, current stake and its value on <date>,
 cash realized since <year>, the next liquidity date, and what it means for

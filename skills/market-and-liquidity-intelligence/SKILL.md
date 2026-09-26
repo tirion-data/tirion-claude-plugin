@@ -105,7 +105,7 @@ After a liquidity event the right first contact is congratulatory: a note or cal
 
 ```markdown
 # Liquidity event: [company], [event type], [date]
-Prepared by [name] for [organization] | [date] | Confidential: internal use only
+Prepared by [name] for [organization], with AI assistance | Reviewed by [name], [date] | Confidential: internal use only
 
 **Purpose.** [Why this matters to us.]
 

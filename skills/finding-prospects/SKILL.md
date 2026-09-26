@@ -113,7 +113,7 @@ When Tirion does not hold a fact that would change the ranking, look it up and c
 
 ```markdown
 # Prospect list: [cause] in [place]
-Prepared by [name] for [organization] | [date] | Confidential: internal use only
+Prepared by [name] for [organization], with AI assistance | Reviewed by [name], [date] | Confidential: internal use only
 
 **Purpose.** [Who this list is for and what decision it supports.]
 

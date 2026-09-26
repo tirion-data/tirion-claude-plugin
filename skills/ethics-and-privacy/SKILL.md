@@ -29,10 +29,12 @@ This is the standard every other skill links to. Apply it before you research an
 **Apra Principles of Ethics and Compliance.** Apra (formerly the Association of Professional Researchers for Advancement) sets the professional standard for prospect research. Its ethics statement, last revised in June 2020, rests on three principles:
 
 - **Ethical standards and integrity.** Act honestly. Report facts truthfully and do not overstate. Mark an inference as an inference. Put the constituent's interests first and disclose conflicts of interest.
-- **Professional standards and behaviors.** Follow all applicable laws and the organization's policies. Keep data accurate. Respect privacy and use discretion: collect only what serves the organization's legitimate relationship with the prospect, and share it only with people who need it for their work.
+- **Professional standards and behaviors.** Follow all applicable laws, the organization's policies and the terms of each data source. Track data provenance, so that every fact is shown to be legally obtained and publicly available from a reliable source. Keep data accurate. Respect privacy and use discretion: collect only what serves the organization's legitimate relationship with the prospect, and share it only with people who need it for their work. Be honest about your identity and role when you use social media in research, and do not intrude on a person's privacy through it.
 - **Apra representation.** Uphold the profession's reputation and report unethical conduct.
 
-Read the current text at aprahome.org before you quote it; this skill paraphrases.
+Read the current text at aprahome.org before you quote it; this skill paraphrases. Apra also publishes toolkits its members use: Ethics and Compliance, Data Minimization, Due Diligence, Vendor Due Diligence, and Ethics in AI for Fundraising. The last one names the risks of AI tools in this work: bias and errors carried in from data, donor privacy, vendor conduct, and the need for continual human review.
+
+**Human review of AI output.** A document Claude drafts is a draft until a named person has checked it. Every briefing, profile and list carries "Prepared by <researcher>, with AI assistance. Reviewed by <name>, <date>." Do not present an unreviewed draft as finished research, and say so if the user plans to send one to a president or board member.
 
 **Donor Bill of Rights.** Written by AFP (the Association of Fundraising Professionals), AHP, CASE and the Giving Institute (formerly AAFRC), and published by AFP at afpglobal.org. Right VI says donors may be assured that information about their donation is handled with respect and with confidentiality to the extent provided by law. Right VII says relationships with people who represent the organization will be professional. Research must be consistent with both.
 
@@ -83,7 +85,7 @@ When the prospect lives outside the US, say that local data-protection law appli
 - Share on a need-to-know basis. A volunteer solicitor gets a volunteer briefing with less detail, not the full profile.
 - Do not send a briefing to the prospect, their family, or an outside party.
 - Keep research in the organization's system of record. Do not leave copies in personal email or shared drives.
-- Refresh or retire old research. A capacity rating from five years ago is not current.
+- Refresh or retire old research. A capacity rating from five years ago is not current. Date every document, name the version it supersedes, and keep it only for as long as the organization's retention schedule allows. Collect and keep the minimum that serves the purpose (Apra's Data Minimization Toolkit is the profession's guide).
 - Honor a donor's request to see, correct or remove their data under the organization's policy and applicable law.
 
 ## Declining a request
@@ -125,3 +127,4 @@ Use `ask_tirion` to assemble what Tirion knows about the person, then `get_news_
 - [ ] Sensitive records are material, cited to the primary record, and neutral.
 - [ ] Inferences are marked as inferences with their basis.
 - [ ] The document is marked confidential and internal.
+- [ ] The document names its human reviewer, or is marked as an unreviewed draft.

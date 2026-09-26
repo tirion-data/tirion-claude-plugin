@@ -179,7 +179,7 @@ Hand off:
 
 ```markdown
 # Property findings: <Full Name>
-Prepared by <name>, <date>. Purpose: real-estate section of a prospect review.
+Prepared by <name>, with AI assistance. Reviewed by <name>, <date>. Purpose: real-estate section of a prospect review.
 
 **Summary.** <2-4 sentences: number of properties, total likely market value
 as a range, primary and second homes by city, any recent purchase or sale,

@@ -117,7 +117,7 @@ Report: rows in, resolved, ambiguous, unresolved, verified by hand, and the tier
 
 ```markdown
 # Portfolio priorities: [officer or pool name]
-Prepared by [name] for [organization] | [date] | Confidential: internal use only
+Prepared by [name] for [organization], with AI assistance | Reviewed by [name], [date] | Confidential: internal use only
 
 **Purpose.** [What decision this supports.]
 

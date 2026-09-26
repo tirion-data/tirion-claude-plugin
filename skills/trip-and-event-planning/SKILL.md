@@ -1,6 +1,6 @@
 ---
 name: trip-and-event-planning
-description: Plan a donor trip or prepare for an event. Use when the user says "I'm going to <city> next month, who should I see", "plan a trip to <place>", "build my visit schedule", "who else is near my meeting", "cluster these visits", "we're hosting a dinner, research the guest list", "who is coming to the gala and how do they know each other", "seating plan", or "event briefing packet". For a trip it resolves the place, finds qualified prospects and current donors there, ranks them, groups them by neighbourhood and day, and writes an itinerary with a one-paragraph brief and a stated purpose or ask for each visit. For an event it researches the guest list (who they are, capacity, ties to each other and to the host) and suggests introductions and seating. It hands off to briefing-writing for individual briefing cards, to prioritizing-prospects to score a large list, and to finding-prospects for broader discovery.
+description: Plan a donor trip or prepare for an event. Use when the user says "I'm going to <city> next month, who should I see", "plan a trip to <place>", "build my visit schedule", "who else is near my meeting", "cluster these visits", "we're hosting a dinner, research the guest list", "who is coming to the gala and how do they know each other", "seating plan", or "event briefing packet". For a trip it resolves the place, finds qualified prospects and current donors there, ranks them, groups them by area and day, and writes an itinerary with a short brief and a stated purpose or ask for each visit. For an event it researches the guest list (who they are, capacity, ties to each other and to the host) and suggests introductions and seating. Hands off to briefing-writing for briefing cards, prioritizing-prospects to score a large list, and finding-prospects for discovery.
 ---
 
 # Trip and event planning
@@ -113,7 +113,7 @@ Summary page (purpose, the five people who matter most tonight and why, introduc
 
 ```markdown
 # Trip plan: [traveller] to [place], [dates]
-Prepared by [name] for [organization] | [date] | Confidential: internal use only
+Prepared by [name] for [organization], with AI assistance | Reviewed by [name], [date] | Confidential: internal use only
 
 **Purpose.** [Goals of the trip.]
 
@@ -138,7 +138,7 @@ Prepared by [name] for [organization] | [date] | Confidential: internal use only
 
 ```markdown
 # Guest research: [event], [date]
-Prepared by [name] for [organization] | [date] | Confidential: internal use only
+Prepared by [name] for [organization], with AI assistance | Reviewed by [name], [date] | Confidential: internal use only
 
 **Purpose.** [ ]
 **Summary.** [The five guests who matter most and the introductions to make.]
