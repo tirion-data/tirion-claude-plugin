@@ -116,3 +116,17 @@ claude plugin eval . --case ethics-cell-phone --ablation none --runs 1
   saved as private reports in the key owner's Tirion account.
 
 Results go to `evals/results/<timestamp>/` (ignored by git).
+
+## Live run against the real connector
+
+`claude plugin eval` starts plugin MCP servers from the plugin's `.mcp.json`, and plugin MCP
+configs do not expand environment variables, so an eval run cannot pass an API key to the hosted
+connector. For a live run, use `scripts/run-live.sh`: it loads this plugin, passes the connector
+with `--mcp-config` (which does expand `${TIRION_API_KEY}`), runs each case's prompt, and saves a
+full trace (`<case>.jsonl`) and the final answer (`<case>.md`) per case. The key never touches a
+file. Grade the answers against each case's `graders/`.
+
+```
+export TIRION_API_KEY=tak_...   # a key for a paid Tirion test account
+scripts/run-live.sh             # all cases, or: scripts/run-live.sh <out_dir> <case> ...
+```
