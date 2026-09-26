@@ -108,7 +108,7 @@ After a liquidity event the right first contact is congratulatory: a note or cal
 
 When the user wants a market brief or an event brief to share:
 
-1. Call `create_tirion_report`. For a place, use kind "area_report" with the question, for example "Wealth and major-gift prospects in Fairfax County, VA". For a deal or any other question, use kind "question" with the question in the user's words, for example "Who among our region's executives was paid in the 2026 acquisition of <company>?". Use visibility "private", or "org" when colleagues should see it.
+1. Call `create_tirion_report`. For a place, use kind "area_report" with `place` set to one county, city or metro area, for example place "Fairfax County, VA". For a deal or any other question, use kind "question" with the question in the user's words, for example "Who among our region's executives was paid in the 2026 acquisition of <company>?". Use visibility "private", or "org" when colleagues should see it.
 2. Give the user the report link (report_url) and the PDF link (pdf_url). Say that the report opens in Tirion and that each reader must be signed in to Tirion.
 3. In the chat, write your own analysis as the cover note: the conclusion, what it means for the organization, and the recommended contact and its timing.
 

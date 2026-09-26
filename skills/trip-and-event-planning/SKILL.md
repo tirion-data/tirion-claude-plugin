@@ -116,7 +116,7 @@ Summary page (purpose, the five people who matter most tonight and why, introduc
 
 ## Deliver: Tirion reports
 
-1. **For the place** (a trip): call `create_tirion_report` with kind "area_report" and the question, for example "Major-gift prospects and wealth in Palm Beach, FL for a visit on 2026-11-12 to 2026-11-14".
+1. **For the place** (a trip): call `create_tirion_report` with kind "area_report" and `place` set to one county, city or metro area, for example place "Palm Beach County, FL". Put the trip dates in the title, not the place.
 2. **For each priority person** (a visit or a guest who matters most): call `create_tirion_report` with kind "person_dossier" and that person's entity_id. Only for people whose identity is confirmed.
 3. Use visibility "private", or "org" when colleagues should see the reports.
 4. Give the user each report link (report_url) and PDF link (pdf_url). Say that the reports open in Tirion and that each reader must be signed in to Tirion.

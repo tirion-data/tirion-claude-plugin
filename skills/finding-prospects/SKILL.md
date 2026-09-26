@@ -115,7 +115,7 @@ Confirm the fact that puts a person near the top of the list against the record 
 
 When the user wants the list as a document to share:
 
-1. Call `create_tirion_report` with kind "prospect_list" and the question in the user's words, for example "Donors interested in access and affordability in Florida with major-gift capacity". Add a title if the user named one. Use visibility "private", or "org" when colleagues should see it.
+1. Call `create_tirion_report`. A list filtered by cause or interest uses kind "question" with the question in the user's words, for example "Donors interested in access and affordability in Florida". A list of the wealthiest prospects in one place, with no cause filter, uses kind "prospect_list" with `place`, for example place "Palm Beach County, FL". Never title a place-only list with a cause it did not filter on. Add a title if the user named one. Use visibility "private", or "org" when colleagues should see it.
 2. Give the user the report link (report_url) and the PDF link (pdf_url). Say that the report opens in Tirion and that each reader must be signed in to Tirion.
 3. In the chat, write your own analysis as the cover note: the three names to act on first and why, how the list was built, and its main limit.
 

@@ -120,7 +120,7 @@ Report: rows in, resolved, ambiguous, unresolved, verified by hand, and the tier
 
 When the user wants the ranked list as a document to share:
 
-1. Call `create_tirion_report` with kind "prospect_list" and the question in the user's words, for example "Rank my portfolio of 40 prospects for visits this quarter". Use visibility "private", or "org" when colleagues should see it.
+1. Call `create_tirion_report` with kind "question" and the question in the user's words, for example "Rank my portfolio of 40 prospects for visits this quarter". Use kind "prospect_list" with `place` only for the wealthiest prospects in one county, city or metro area. Use visibility "private", or "org" when colleagues should see it.
 2. Give the user the report link (report_url) and the PDF link (pdf_url). Say that the report opens in Tirion and that each reader must be signed in to Tirion.
 3. In the chat, write your own analysis as the cover note: the tier counts, the three people to see first and why, and the top next steps.
 
