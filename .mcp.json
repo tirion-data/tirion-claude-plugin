@@ -1,0 +1,6 @@
+{
+  "tirion": {
+    "type": "http",
+    "url": "https://mcp.tiriondata.com/mcp"
+  }
+}

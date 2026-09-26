@@ -1,0 +1,16 @@
+{
+  "name": "tirion",
+  "description": "Tirion Data's plugin for Claude: wealth intelligence and prospect-research skills for fundraisers.",
+  "owner": {
+    "name": "Tirion Data",
+    "email": "support@tiriondata.com"
+  },
+  "plugins": [
+    {
+      "name": "tirion",
+      "description": "Wealth intelligence for fundraisers and prospect researchers: the Tirion Data connector plus research skills.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

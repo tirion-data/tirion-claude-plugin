@@ -1,0 +1,14 @@
+{
+  "name": "tirion",
+  "version": "1.0.0",
+  "description": "Wealth intelligence for fundraisers and prospect researchers. Connects Claude to Tirion Data (people, SEC filings, IRS 990s, property, political giving, news) and adds research skills: capacity research, bios, briefings, trip and event planning, finding and prioritizing prospects, filing and property analysis, and research ethics.",
+  "author": {
+    "name": "Tirion Data",
+    "email": "support@tiriondata.com",
+    "url": "https://tiriondata.com"
+  },
+  "homepage": "https://tiriondata.com",
+  "repository": "https://github.com/tirion-data/tirion-claude-plugin",
+  "license": "Apache-2.0",
+  "keywords": ["fundraising", "prospect research", "wealth screening", "philanthropy", "advancement", "SEC filings", "Form 990", "nonprofit"]
+}
