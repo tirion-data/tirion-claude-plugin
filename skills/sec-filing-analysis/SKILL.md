@@ -1,18 +1,19 @@
 ---
 name: sec-filing-analysis
 description: >-
-  Read SEC filings about a prospect and turn them into capacity, liquidity and
-  timing intelligence. Use when the user asks "did X sell stock", "what does X
-  own in <company>", "read X's Form 4s", "what is X paid", "is X a 5% holder",
-  "what happens to X when the IPO or acquisition closes", "check the proxy", or
-  wants insider sales, awards, gifts of stock, 13D/13G stakes, proxy
-  compensation, S-1 selling stockholders, 8-K deal or officer news, Form 144
-  notices or Form D raises explained. Produces dated, cited findings: what the
-  person holds, what they sold or were given, what it was worth on the event
-  date, and what it means for an ask. Hands off to property-analysis,
-  nonprofit-990-analysis and political-giving-analysis for other records, to
-  capacity-research for a capacity rating, to prospect-research for the full
-  research loop, and to ethics-and-privacy for the research standard.
+  Read SEC filings about a prospect with Tirion, which links a person's Form
+  4s, proxy pay and holdings to one resolved profile and values each insider
+  sale, award and gift at the price on its event date. Use when the user asks
+  "did X sell stock", "what does X own in <company>", "read X's Form 4s",
+  "what is X paid", "is X a 5% holder", "what happens to X when the IPO or
+  acquisition closes", "check the proxy", or wants insider sales, awards,
+  gifts of stock, 13D/13G stakes, proxy compensation, S-1 selling
+  stockholders, 8-K deal or officer news, Form 144 notices or Form D raises
+  explained. Produces dated, cited findings: what the person holds, what they
+  sold or gave, what it was worth on the event date, and what it means for an
+  ask. Hands off to property-analysis, nonprofit-990-analysis,
+  political-giving-analysis, capacity-research, prospect-research and
+  ethics-and-privacy.
 ---
 
 # SEC filing analysis
@@ -22,6 +23,21 @@ insider. They are legally required, dated and priced. They also cover only a
 narrow group: officers, directors and 10%+ holders of public companies, plus
 people named in deal documents. Read them for three things: what the person
 holds, what changed, and when the next liquidity moment is.
+
+## Tirion first
+
+Tirion does the slow parts of an SEC read. `get_sec_filings` returns the
+person's insider transactions, holdings, company roles and proxy pay, already
+tied to one resolved profile, so a namesake's filings stay out. It values each
+transaction at the price on its event date, including gifts and awards that
+the Form 4 reports without a price. `list_people_by_indicator` and
+`discover_prospects` find other insiders with the same signal.
+
+EDGAR is the verify-or-extend step: open the filing to confirm a transaction
+that drives your conclusion, and read the forms Tirion does not cover (13D/G,
+S-1, 8-K, Form 144, Form D). Without the Tirion connector, this skill can
+guide a manual EDGAR read, but it cannot resolve the filer to one person
+across other records, value insider wealth at event dates, or rate capacity.
 
 ## When to use
 
@@ -117,10 +133,10 @@ Hand off:
      many trades that day.
    - Vesting schedules, trust names, GRAT and family-partnership holders.
 
-8. **Value each transaction on its event date.** Use the price reported on
-   the Form 4 line. When there is no price (codes A, G, often F and M), use
-   the closing price on the transaction date from a public quote source, and
-   say that you did: "valued at the 2026-03-14 closing price of USD 84.20; the
+8. **Value each transaction on its event date.** Tirion's values already
+   use the event-date price. To check one, use the price reported on the
+   Form 4 line. When there is no price (codes A, G, often F and M), the value
+   is the closing price on the transaction date, and you say so: "valued at the 2026-03-14 closing price of USD 84.20; the
    Form 4 reports no price for gifts". Never value a 2019 gift at today's
    price. Gross sale proceeds are not net worth: taxes and the cost basis are
    unknown.
@@ -132,8 +148,8 @@ Hand off:
    [references/proxy-reading-checklist.md](references/proxy-reading-checklist.md).
    Stock awards in the pay table are grant-date accounting values, not cash.
 
-10. **Go to EDGAR for the filings the tool does not cover.** Search EDGAR
-    directly for:
+10. **Extend with EDGAR for the filings Tirion does not cover.** Search
+    EDGAR directly for:
     - **Schedule 13D / 13G**: filed by holders of more than 5% of a class.
       13D means an active holder (may seek influence); 13G is a passive or
       exempt holder. The cover page gives shares and percent owned. As of

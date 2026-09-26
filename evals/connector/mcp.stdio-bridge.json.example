@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "tirion": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://mcp.tiriondata.com/mcp",
+        "--header",
+        "Authorization: Bearer ${EVAL_TIRION_API_KEY}"
+      ]
+    }
+  }
+}

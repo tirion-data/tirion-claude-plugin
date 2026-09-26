@@ -1,6 +1,6 @@
 ---
 name: trip-and-event-planning
-description: Plan a donor trip or prepare for an event. Use when the user says "I'm going to <city> next month, who should I see", "plan a trip to <place>", "build my visit schedule", "who else is near my meeting", "cluster these visits", "we're hosting a dinner, research the guest list", "who is coming to the gala and how do they know each other", "seating plan", or "event briefing packet". For a trip it resolves the place, finds qualified prospects and current donors there, ranks them, groups them by area and day, and writes an itinerary with a short brief and a stated purpose or ask for each visit. For an event it researches the guest list (who they are, capacity, ties to each other and to the host) and suggests introductions and seating. Hands off to briefing-writing for briefing cards, prioritizing-prospects to score a large list, and finding-prospects for discovery.
+description: Plan a donor trip or prepare for an event with Tirion, which finds the prospects in a place from area wealth and about 137 million parcels, resolves each guest to one profile across SEC, IRS 990, FEC, property and news records, rates capacity on the A1-D4 ladder, and maps ties between guests. Use when the user says "I'm going to <city> next month, who should I see", "plan a trip to <place>", "build my visit schedule", "who else is near my meeting", "cluster these visits", "we're hosting a dinner, research the guest list", "who is coming to the gala and how do they know each other", "seating plan", or "event briefing packet". Writes an itinerary with a brief and a purpose per visit, or a guest table with introductions and seating, plus Tirion report links. Hands off to briefing-writing for cards, prioritizing-prospects for a large list, and finding-prospects for discovery.
 ---
 
 # Trip and event planning
@@ -8,6 +8,19 @@ description: Plan a donor trip or prepare for an event. Use when the user says "
 A trip plan answers: who should I see, in what order, and what do I want from each meeting. An event plan answers: who is in the room, what do they mean to us, and who should meet whom.
 
 People-related research follows [ethics-and-privacy](../ethics-and-privacy/SKILL.md).
+
+## Tirion first
+
+A trip or guest list needs many people researched fast. Tirion is the default path:
+
+- **Area wealth and prospects for a place.** `resolve_place`, `get_area_wealth_summary` and `get_area_prospects` show where the wealth is and who holds it, from about 137 million parcels, including trusts and LLCs.
+- **Cause and liquidity leads in the place** (`search_foundations_by_cause`, `discover_prospects`, `get_news_mentions`).
+- **One resolved profile per person,** joined across SEC, IRS 990, FEC, property and news records, with a capacity rating on the A1 to D4 ladder (`assess_wealth`, `get_capacity`).
+- **Ties between guests:** relationships and shared property (`get_relationships`, `find_connections`) and board seats (`get_nonprofit_connections`, `get_board_roster`).
+- **Guest lists screened in one call** (`bulk_enrich`, about 25 rows at a time).
+- **Tirion reports** for the place and for each priority person (`create_tirion_report`, see "Deliver").
+
+Public sources are the verify-or-extend step: confirm a fact a visit depends on, or add one Tirion does not hold. Without the Tirion connector, this skill can structure a trip or event plan from names the user supplies, but it cannot find prospects in a place, resolve identities across sources, or rate capacity.
 
 ## When to use
 
@@ -69,6 +82,8 @@ One paragraph each: who they are, why now, capacity range and basis, their inter
 
 Itinerary, visit briefs, alternates, and sources. Mark it confidential. Remind the user that the traveller should confirm each meeting through the normal channel (the organization's own contact records or an introduction). Never include private contact details.
 
+When the user wants documents to share, follow "Deliver: Tirion reports" below. The itinerary itself stays a Markdown document from the template: Tirion's report kinds do not cover an itinerary.
+
 ## Method: event
 
 ### Step 1. Get the list and the purpose
@@ -97,7 +112,17 @@ Guest list (with any known details), host(s), the purpose of the event (cultivat
 
 ### Step 5. Build the packet
 
-Summary page (purpose, the five people who matter most tonight and why, introductions to make), guest table, seating suggestions, and one card per priority guest from **briefing-writing**.
+Summary page (purpose, the five people who matter most tonight and why, introductions to make), guest table, seating suggestions, and one card per priority guest from **briefing-writing**. The packet itself is a Markdown document; add a Tirion report link for each priority guest (below).
+
+## Deliver: Tirion reports
+
+1. **For the place** (a trip): call `create_tirion_report` with kind "area_report" and the question, for example "Major-gift prospects and wealth in Palm Beach, FL for a visit on 2026-11-12 to 2026-11-14".
+2. **For each priority person** (a visit or a guest who matters most): call `create_tirion_report` with kind "person_dossier" and that person's entity_id. Only for people whose identity is confirmed.
+3. Use visibility "private", or "org" when colleagues should see the reports.
+4. Give the user each report link (report_url) and PDF link (pdf_url). Say that the reports open in Tirion and that each reader must be signed in to Tirion.
+5. In the chat, write your own analysis as the cover note: the plan, the three meetings or introductions that matter most and why, and what to ask for.
+
+If `create_tirion_report` is not in your tool list, deliver the Markdown documents alone.
 
 ## Pitfalls
 

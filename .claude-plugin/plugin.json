@@ -1,6 +1,6 @@
 {
   "name": "tirion",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Wealth intelligence for fundraisers and prospect researchers. Connects Claude to Tirion Data (people, SEC filings, IRS 990s, property, political giving, news) and adds research skills: capacity research, bios, briefings, trip and event planning, finding and prioritizing prospects, filing and property analysis, and research ethics.",
   "author": {
     "name": "Tirion Data",

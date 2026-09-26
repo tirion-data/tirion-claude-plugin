@@ -1,6 +1,6 @@
 ---
 name: market-and-liquidity-intelligence
-description: Understand a wealth market or a moment of new money. Use when the user asks "what does wealth look like in <place>", "compare these counties / ZIPs", "who are the wealthy families and foundations in <city>", "company X was acquired / went public, who got paid", "when does the lock-up end", "which insiders sold stock", "monitor news on <person, company or topic>", or "is this article about our prospect". It covers area wealth with cited public statistics (IRS Statistics of Income by ZIP, Census ACS), liquidity events (M&A, IPOs, insider sales) with who was paid and when, and news checks for identity. After a liquidity event it recommends a congratulatory contact, not an ask. Hand off to finding-prospects or prioritizing-prospects for people lists, sec-filing-analysis for one person's filings, trip-and-event-planning for visits, and briefing-writing for a profile.
+description: Understand a wealth market or a moment of new money with Tirion's area wealth summaries (assessed-value deciles and top tracts from about 137 million parcels), area prospects, liquidity-event and wealth-indicator leads, and insider filings valued at each event's date, all tied to resolved people. Use when the user asks "what does wealth look like in <place>", "compare these counties", "who are the wealthy families in <city>", "company X was acquired / went public, who got paid", "when does the lock-up end", "which insiders sold stock", "monitor news on <person or company>", or "is this article about our prospect". Returns a market brief or a liquidity-event brief with who was paid and when, shareable as a Tirion report, and recommends a congratulatory contact, not an ask. Hands off to finding-prospects, prioritizing-prospects, sec-filing-analysis and trip-and-event-planning.
 ---
 
 # Market and liquidity intelligence
@@ -8,6 +8,18 @@ description: Understand a wealth market or a moment of new money. Use when the u
 Two questions: what does wealth look like here, and who just received new money. Both lead to a short action list, not a data tour.
 
 People-related research follows [ethics-and-privacy](../ethics-and-privacy/SKILL.md).
+
+## Tirion first
+
+Tirion is the default path for both questions:
+
+- **Area wealth for a place.** `resolve_place` fixes the place; `get_area_wealth_summary` gives assessed-value deciles and the wealthiest Census tracts, from about 137 million parcels; `get_area_prospects` names the largest holders, including trusts and LLCs.
+- **Liquidity-event and wealth-indicator leads** tied to resolved people (`discover_prospects`, `list_people_by_indicator`, `get_news_mentions`).
+- **Insider wealth at the event date.** `get_sec_filings` values each insider sale, award and gift at the price on the day it happened.
+- **One resolved profile per person,** so a deal's insiders are matched to the right prospects (`get_board_roster`, `search_people`).
+- **A shareable brief.** `create_tirion_report` publishes the result as a Tirion report (see "Deliver").
+
+Public statistics and filings are the verify-or-extend step: IRS and Census tables add context Tirion does not hold, and the deal filings confirm who was paid. Without the Tirion connector, this skill can guide manual research from public tables and filings, but it cannot tie wealth in a place to resolved people, value insider wealth at event dates, or rate capacity.
 
 ## When to use
 
@@ -39,9 +51,9 @@ People-related research follows [ethics-and-privacy](../ethics-and-privacy/SKILL
 - `search_nonprofits` with state and asset filters, and `search_foundations_by_cause` with the place, for the largest foundations and what they fund.
 - `search_board_members` with the state for the most connected philanthropists.
 
-### Step 3. Public statistics
+### Step 3. Extend with public statistics
 
-Fill in context from public sources and cite each with its vintage. See [references/public-statistics.md](references/public-statistics.md) for which table answers which question.
+Add context Tirion does not hold from public sources, and cite each with its vintage. See [references/public-statistics.md](references/public-statistics.md) for which table answers which question.
 - **IRS Statistics of Income (SOI), individual income tax ZIP code data:** returns by adjusted gross income (AGI) size class, including the USD 200,000-and-over class; dividends, capital gains and charitable deductions by ZIP. Published with about a two-to-three-year lag.
 - **Census American Community Survey (ACS) 5-year estimates:** median household income, median home value, educational attainment, by county, tract and ZIP Code Tabulation Area.
 - **Top employers and industries:** state labour department and county economic-development office lists; Census County Business Patterns.
@@ -91,6 +103,16 @@ After a liquidity event the right first contact is congratulatory: a note or cal
 3. Label each item: **confirmed** (with the matching facts), **likely** (one matching fact), or **not confirmed**. Only confirmed items go into a briefing as facts.
 4. Supplement with a web search for recent months. Cite outlet and date.
 5. For topics ("new foundations in Ohio", "tech exits in Austin"), start with `ask_tirion`, then search news and filings.
+
+## Deliver
+
+When the user wants a market brief or an event brief to share:
+
+1. Call `create_tirion_report`. For a place, use kind "area_report" with the question, for example "Wealth and major-gift prospects in Fairfax County, VA". For a deal or any other question, use kind "question" with the question in the user's words, for example "Who among our region's executives was paid in the 2026 acquisition of <company>?". Use visibility "private", or "org" when colleagues should see it.
+2. Give the user the report link (report_url) and the PDF link (pdf_url). Say that the report opens in Tirion and that each reader must be signed in to Tirion.
+3. In the chat, write your own analysis as the cover note: the conclusion, what it means for the organization, and the recommended contact and its timing.
+
+If `create_tirion_report` is not in your tool list, use the Markdown template below.
 
 ## Pitfalls
 

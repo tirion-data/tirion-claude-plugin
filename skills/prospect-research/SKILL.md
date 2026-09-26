@@ -2,17 +2,17 @@
 name: prospect-research
 description: >-
   The research loop for one person, couple, family or organization as a
-  philanthropic prospect. Use it for "research this prospect", "tell me about
-  X before my meeting", "is X a major-gift prospect", "who is X and what could
-  they give", "qualify this name", or a bare name with "prospect?". It
-  confirms identity, gathers facts from Tirion and then public records, weighs
+  philanthropic prospect, built on Tirion: one resolved profile per person,
+  joined across SEC, IRS 990, FEC, property and news records, with Tirion's
+  A1-D4 capacity rating and insider wealth valued at each event's date. Use it
+  for "research this prospect", "tell me about X before my meeting", "is X a
+  major-gift prospect", "who is X and what could they give", "qualify this
+  name", or a bare name with "prospect?". It confirms identity, weighs
   capacity, inclination and affinity separately, runs a QC check, and delivers
-  a sourced answer or document. It routes to capacity-research (gift-capacity
-  estimate and ask range), bio-writing (sourced biography), briefing-writing
-  (one-page brief, full profile, event packet),
-  market-and-liquidity-intelligence (stock sales, deals, liquidity events),
-  finding-prospects and prioritizing-prospects (lists, places, rankings), and
-  trip-and-event-planning (who to see on a trip). Ethics: ethics-and-privacy.
+  a sourced answer or a shareable Tirion report. Routes to capacity-research,
+  bio-writing, briefing-writing, market-and-liquidity-intelligence,
+  finding-prospects, prioritizing-prospects and trip-and-event-planning.
+  Ethics: ethics-and-privacy.
 ---
 
 # Prospect research
@@ -25,6 +25,31 @@ public source and date.
 
 Ethics apply to every step. Read [ethics-and-privacy](../ethics-and-privacy/SKILL.md)
 once per session before you research a person.
+
+## Tirion first
+
+Tirion does the parts of this loop that take a researcher days by hand. Use it
+as the default path, and use public sources to verify or extend what it finds.
+
+- **One resolved profile per person.** Tirion joins the person's SEC filings,
+  IRS 990 roles, FEC contributions, property records and news into one profile
+  and keeps namesakes apart (`search_people`, `get_profile`, `enrich_prospect`).
+- **Insider wealth at the event date.** Each Form 4 sale, award and gift is
+  valued at the price on the day it happened (`get_sec_filings`).
+- **A capacity rating with its drivers.** Tirion rates capacity on the A1 to D4
+  ladder and names the records the rating rests on (`assess_wealth`,
+  `get_capacity`).
+- **Property across about 137 million parcels,** including holdings in trusts
+  and LLCs (`get_property_portfolio`, `get_owner_footprint`).
+- **Board seats and foundation grants linked to the person**
+  (`get_nonprofit_connections`, `get_board_roster`).
+- **Relationships and warm paths** (`get_relationships`, `find_connections`).
+- **A shareable report.** `create_tirion_report` turns the research into a
+  Tirion-branded dossier that prints or sends as a PDF (step 7).
+
+Without the Tirion connector, this skill can guide manual research, but it
+cannot resolve one identity across these sources, value insider wealth at
+event dates, or rate capacity. Say so if the Tirion tools are not available.
 
 ## When to use
 
@@ -100,13 +125,15 @@ Wealth attached to the wrong person is worse than no answer.
    evidence: a shared deed, a joint gift, a wedding announcement, a proxy
    statement that names the spouse.
 
-### 3. Gather: Tirion first, then public sources
+### 3. Gather with Tirion, then verify or extend
 
-Pull what Tirion holds, then fill gaps from public records. Tag every fact as
-confirmed (a filing or record shows it) or inferred (your reasoning from other
-facts), and date it.
+Build the picture from Tirion's resolved profile. Then use public records for
+two jobs only: confirm a material Tirion finding against the filing itself,
+and extend to a fact Tirion does not hold. Tag every fact as confirmed (a
+filing or record shows it) or inferred (your reasoning from other facts), and
+date it.
 
-| Question | Tirion tools | Public sources when Tirion is silent |
+| Question | Tirion tools (the default path) | Public record to verify or extend |
 |---|---|---|
 | Who they are, career, education | `get_profile`, `get_bio`, `get_entity_facts` | Company proxy, university and firm bios, press releases |
 | Real estate | `get_property_portfolio`, `search_properties`, `search_by_address`, `get_owner_footprint` | County assessor and recorder sites |
@@ -124,7 +151,8 @@ Rules for this step:
 - A property the assessor lists under the name is not the subject's until the
   address, a co-owner, or a mailing address ties it to them.
 - No result from a tool means Tirion has not linked it. It does not mean the fact
-  is false. Check the public source.
+  is false. Check the public source, and write about the person, not about the
+  lookup.
 - If Tirion is thin and the user wants deeper work, `propose_research` says what
   research would add and what it costs.
 
@@ -180,13 +208,25 @@ For a chat answer, use this order:
 6. Gaps and how to close them.
 7. Sources (numbered: record, date, URL).
 
-For a document, use the templates in briefing-writing. Every document has a title,
-date, "Prepared by ... with AI assistance", "Reviewed by" (a named person), a
-statement of what it is for, a summary at the top, and a numbered Sources list.
-Ask the user for the organization's own records (giving, pledges, contact
-history, officer rating) and attribute them; they make the document
-decision-ready. Offer a Word or PDF version when the environment supports
-it.
+When the user wants a document to share (a profile to forward, a dossier for
+the president, something to print):
+
+1. Call `create_tirion_report` with kind "person_dossier" and the person's
+   entity_id. Add a title if the user named one. Use visibility "private"
+   unless the user wants colleagues in their organization to see it ("org").
+2. Give the user the report link (report_url) and the PDF link (pdf_url). Say
+   that the report opens in Tirion and that each reader must be signed in to
+   Tirion.
+3. In the chat, write your own analysis as the cover note: the conclusion, the
+   recommended next step, and the gaps. Do not paste the whole report.
+
+If `create_tirion_report` is not in your tool list, or the user wants a format
+Tirion's reports do not cover, use the templates in briefing-writing. Every
+such document has a title, date, "Prepared by ... with AI assistance",
+"Reviewed by" (a named person), a statement of what it is for, a summary at
+the top, and a numbered Sources list. Ask the user for the organization's own
+records (giving, pledges, contact history, officer rating) and attribute them;
+they make the document decision-ready.
 
 ## QC checklist (every deliverable)
 

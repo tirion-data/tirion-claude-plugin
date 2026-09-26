@@ -2,17 +2,18 @@
 name: political-giving-analysis
 description: >-
   Read FEC and state campaign-finance records as evidence of a prospect's
-  capacity, giving habit, affinity and network. Use when the user asks "does X
-  give politically", "is X a max-out donor", "what has X given to", "who gives
-  from <employer or state>", "what is this committee", "look up X on the FEC",
-  or wants contribution history or committees explained. Produces a cited
-  summary: totals by cycle, largest gifts, whether the donor gives at the legal
-  limit, super PAC or party gifts, what that suggests about capacity and habit,
-  and the identity checks behind it. Never describes political views beyond what
-  the record shows. Hands off to sec-filing-analysis, nonprofit-990-analysis and
-  property-analysis for other records, to capacity-research for a capacity
-  rating, to prospect-research for the full research loop, and to
-  ethics-and-privacy for the research standard.
+  capacity, giving habit and network, with Tirion, which links a person's FEC
+  contributions to one resolved profile beside their SEC, IRS 990 and
+  property records, so a namesake's gifts stay out. Use when the user asks
+  "does X give politically", "is X a max-out donor", "what has X given to",
+  "who gives from <employer or state>", "what is this committee", "look up X
+  on the FEC", or wants contribution history or committees explained.
+  Produces a cited summary: totals by cycle, largest gifts, whether the donor
+  gives at the legal limit, super PAC or party gifts, what that suggests
+  about capacity and habit, and the identity checks behind it. Never
+  describes political views. Hands off to sec-filing-analysis,
+  nonprofit-990-analysis, property-analysis, capacity-research,
+  prospect-research and ethics-and-privacy.
 ---
 
 # Political giving analysis
@@ -29,6 +30,22 @@ research they show three things:
 
 Political giving is not charitable giving. It does not prove interest in
 your cause. It is also a sensitive subject. Report the record, not a view.
+
+## Tirion first
+
+The hard part of an FEC read is identity: common names and self-reported
+employers mix people together. `get_political_giving` returns the
+contributions Tirion has linked to one resolved person, beside that person's
+SEC, IRS 990 and property records, so you can see the gifts in the context
+of the whole capacity picture (`assess_wealth`). `get_fec_committee` names
+each recipient, and `search_political_donors` finds donors by employer or
+state.
+
+FEC.gov and state campaign-finance sites are the verify-or-extend step:
+confirm a large gift against the filing, and add state-level giving that
+federal data does not show. Without the Tirion connector, this skill can
+guide a manual FEC search, but it cannot resolve donor records to one
+person across sources or rate capacity.
 
 ## When to use
 

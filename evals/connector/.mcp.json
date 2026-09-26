@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "tirion": {
+      "type": "http",
+      "url": "https://mcp.tiriondata.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${EVAL_TIRION_API_KEY}"
+      }
+    }
+  }
+}

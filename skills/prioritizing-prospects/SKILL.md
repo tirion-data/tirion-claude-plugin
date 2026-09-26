@@ -1,6 +1,6 @@
 ---
 name: prioritizing-prospects
-description: Qualify, rank and tier a pool of prospects or a gift officer's portfolio, or screen a spreadsheet of names. Use when the user says "prioritize my portfolio", "rank these prospects", "who should I see first", "tier this list A/B/C", "qualify these names", "screen this spreadsheet / donor file / event list", "wealth screen", "which of these people have capacity", or "who is ready for an ask". It scores each person on capacity, inclination, timing and access with an explained rubric, returns A/B/C tiers with a reason for each placement and the top next steps, and for a spreadsheet runs a Tirion screening and then verifies the top matches by hand before anyone acts. Hand off to finding-prospects when the user has no names yet, to trip-and-event-planning when the ranked list feeds a trip or event, and to briefing-writing for a full profile of a top prospect.
+description: Qualify, rank and tier a pool of prospects or a gift officer's portfolio, or screen a list of names, with Tirion's list screening, which resolves each row to one person across SEC, IRS 990, FEC, property and news records and attaches a capacity rating on the A1-D4 ladder. Use when the user says "prioritize my portfolio", "rank these prospects", "who should I see first", "tier this list A/B/C", "qualify these names", "screen this spreadsheet / donor file / event list", "wealth screen", or "who is ready for an ask". It scores capacity, inclination, affinity, timing and access with an explained rubric, returns A/B/C tiers with a reason for each, verifies top matches by hand, and can share the result as a Tirion report. Hand off to finding-prospects when there are no names yet, trip-and-event-planning for a trip or event, and briefing-writing for one full profile.
 ---
 
 # Prioritizing prospects
@@ -8,6 +8,18 @@ description: Qualify, rank and tier a pool of prospects or a gift officer's port
 The job is to tell a gift officer where to spend the next quarter, and why. Every placement must carry its reason, so the officer can disagree with it.
 
 People-related research follows [ethics-and-privacy](../ethics-and-privacy/SKILL.md).
+
+## Tirion first
+
+Ranking a list by hand means researching every name from scratch. Tirion does the first pass:
+
+- **List screening.** `bulk_enrich` resolves up to about 25 rows per call to one person each and returns a match status and method for every row. Larger lists run as a saved screening in the Tirion app; read them back with `get_screening_status` and `get_screening_results`.
+- **One resolved profile per person,** joined across SEC, IRS 990, FEC, property and news records, so two people with one name are never scored as one.
+- **Capacity on the A1 to D4 ladder with its drivers** (`get_capacity`, `assess_wealth`), with insider sales valued at the price on each event's date (`get_sec_filings`) and property across about 137 million parcels (`get_property_portfolio`).
+- **Timing and access signals:** recent news and filings (`get_news_mentions`, `get_sec_filings`) and relationships (`get_relationships`, `find_connections`).
+- **A shareable result.** `create_tirion_report` publishes the ranked list as a Tirion report (see "Deliver").
+
+Public sources are the verify-or-extend step: confirm the top matches against the records themselves, and add evidence Tirion does not hold, such as a peer institution's donor roll. Without the Tirion connector, this skill can apply the rubric to evidence the user supplies, but it cannot screen a list, resolve identities across sources, or rate capacity.
 
 ## When to use
 
@@ -103,6 +115,16 @@ For every row that would land in tier A or B:
 - A spot check of a few "unresolved" rows, to see whether the input data (misspelling, old address) caused the miss.
 
 Report: rows in, resolved, ambiguous, unresolved, verified by hand, and the tier counts.
+
+## Deliver
+
+When the user wants the ranked list as a document to share:
+
+1. Call `create_tirion_report` with kind "prospect_list" and the question in the user's words, for example "Rank my portfolio of 40 prospects for visits this quarter". Use visibility "private", or "org" when colleagues should see it.
+2. Give the user the report link (report_url) and the PDF link (pdf_url). Say that the report opens in Tirion and that each reader must be signed in to Tirion.
+3. In the chat, write your own analysis as the cover note: the tier counts, the three people to see first and why, and the top next steps.
+
+If `create_tirion_report` is not in your tool list, or the list depends on the organization's own records that Tirion does not hold, use the Markdown template below.
 
 ## Pitfalls
 

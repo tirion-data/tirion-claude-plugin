@@ -1,18 +1,19 @@
 ---
 name: property-analysis
 description: >-
-  Analyze a prospect's real estate. Use when the user asks "what property does X
-  own", "does X have a second home", "who owns <address>", "what is X's house
-  worth", "did X buy or sell a home recently", "who are the property owners near
-  <place>", or wants a portfolio, sale history, LLC or trust ownership
-  explained. Produces a cited property section: each holding with its assessed
-  value, the market-value adjustment and why, how ownership was confirmed,
-  recent purchases or sales as liquidity or life events, and what the portfolio
-  means as a capacity floor. Shows city rather than street address unless the
-  user's policy allows addresses. Hands off to sec-filing-analysis,
-  nonprofit-990-analysis and political-giving-analysis for other records, to
-  capacity-research for a capacity rating, to prospect-research for the full
-  research loop, and to ethics-and-privacy for the research standard.
+  Analyze a prospect's real estate with Tirion, which links property across
+  about 137 million parcels to resolved people, including homes held in
+  trusts and LLCs, and rolls up an owner's holdings by county and state. Use
+  when the user asks "what does X own", "does X have a second home",
+  "who owns <address>", "what is X's house worth", "did X buy or sell a home
+  recently", "who are the property owners near <place>", or wants a
+  portfolio, sale history, LLC or trust ownership explained. Produces a cited
+  property section: each holding with its assessed value, the market-value
+  adjustment and why, how ownership was confirmed, recent purchases or sales,
+  and what the portfolio means as a capacity floor. Shows city, not street
+  address unless allowed. Hands off to sec-filing-analysis,
+  nonprofit-990-analysis, political-giving-analysis, capacity-research,
+  prospect-research and ethics-and-privacy.
 ---
 
 # Property analysis
@@ -21,6 +22,30 @@ Real estate is the most common public wealth signal. It is also the easiest
 to misread. The county records a value set by its own rules, in the name of
 whoever holds title, which may be a trust or an LLC. Your job is to find what
 the prospect's household owns, value it honestly, and say what it means.
+
+## Tirion first
+
+Finding a person's property by hand means searching one county at a time
+and guessing which trust or LLC is theirs. Tirion does that across about 137
+million parcels:
+
+- `get_property_portfolio` returns the parcels linked to the person, with
+  the county's value and assessment year and the true count when there are
+  more than 20.
+- `get_owner_footprint` rolls up an owner's confirmed parcels by county and
+  state, so second homes in other states show up.
+- `search_properties`, `search_by_address`, `search_parcels` and
+  `get_owners_near` search by owner, address, value or place.
+- Ownership links run through trusts, LLCs and co-owners, and each parcel
+  sits on the same resolved profile as the person's SEC, 990 and FEC
+  records.
+
+The county assessor and recorder are the verify-or-extend step: confirm a
+holding that drives capacity, read the sale history and mortgages, and
+check a county Tirion does not cover. Without the Tirion connector, this
+skill can guide a county-by-county search, but it cannot find a person's
+property across counties, link trust and LLC holdings to them, or rate
+capacity.
 
 ## When to use
 
@@ -71,8 +96,9 @@ Hand off:
    comparable; the tool says which. An empty list means no property was found in
    the records searched, not that the person owns none.
 
-4. **Look for what the portfolio missed.** Property is often held in other
-   names. Search for each:
+4. **Look for what the portfolio missed.** Tirion links trusts, LLCs and
+   co-owners where a record ties them to the person. For names it has not
+   linked, search each:
    - `search_properties` with `owner_name` in county order, last name first
      ("Doe Jane", "Doe Family Trust", "Doe John & Jane"), and a state or
      county.

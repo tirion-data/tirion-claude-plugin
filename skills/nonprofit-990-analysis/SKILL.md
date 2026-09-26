@@ -1,18 +1,18 @@
 ---
 name: nonprofit-990-analysis
 description: >-
-  Read IRS Form 990, 990-EZ and 990-PF filings for prospect research. Use when
-  the user asks "does X have a family foundation", "what does the X Foundation
-  fund", "who is on the board of <nonprofit>", "what boards does X sit on", "how
-  big is this foundation", "who gives to <cause> in <state>", "read this 990",
-  or wants grants, trustees, officer pay, related-party deals or contributors
-  explained. Produces cited findings: the person's board and trustee roles, a
-  family foundation's assets, payout, grant interests and geography, and what
-  that means for capacity and affinity. Covers donor-advised funds (grants that
-  do not name the donor). Hands off to sec-filing-analysis, property-analysis
-  and political-giving-analysis for other records, to capacity-research for a
-  capacity rating, to prospect-research for the full research loop, and to
-  ethics-and-privacy for the research standard.
+  Read IRS Form 990, 990-EZ and 990-PF filings with Tirion, which links 990
+  board, officer and trustee seats and foundation grants to resolved people
+  and finds foundations by cause and place. Use when the user asks "does X
+  have a family foundation", "what does the X Foundation fund", "who is on
+  the board of <nonprofit>", "what boards does X sit on", "how big is this
+  foundation", "who gives to <cause> in <state>", "read this 990", or wants
+  grants, trustees, officer pay, related-party deals or contributors
+  explained. Produces cited findings: board and trustee roles, a family
+  foundation's assets, payout, grant interests and geography, and what that
+  means for capacity and affinity. Covers donor-advised funds. Hands off to
+  sec-filing-analysis, property-analysis, political-giving-analysis,
+  capacity-research, prospect-research and ethics-and-privacy.
 ---
 
 # Nonprofit 990 analysis
@@ -36,6 +36,29 @@ Forms:
 - **Form 990-PF**: every private foundation, whatever its size.
 
 Thresholds are as of 2026; check irs.gov for current rules.
+
+## Tirion first
+
+Tirion links the 990 series to people. That is the step a researcher cannot
+do from ProPublica alone:
+
+- `get_nonprofit_connections` lists a person's officer, director and trustee
+  roles across 990 filings, tied to one resolved profile.
+- `get_board_roster` lists the board of one organization, with each member
+  linked to a profile you can research further.
+- `search_foundations` finds a family foundation by the person's name or
+  surname and by 990-PF officer lists.
+- `search_foundations_by_cause` finds foundations whose grants match a
+  cause, nationally, in a state or in a city, with the matching grants as
+  evidence.
+- `search_board_members` finds people who sit on several boards.
+
+The return itself (on ProPublica Nonprofit Explorer, IRS TEOS or Candid) is
+the verify-or-extend step: confirm a role or a grant that matters, and read
+the parts Tirion does not summarize, such as the full grant list or
+Schedule L. Without the Tirion connector, this skill can guide a manual read
+of a return, but it cannot link board seats and grants to resolved people
+across sources or rate their capacity.
 
 ## When to use
 
@@ -92,7 +115,7 @@ Hand off:
 
 5. **Read the foundation's return.** Use `search_nonprofits` with the name or
    EIN (employer identification number, the organization's tax ID) to get its
-   assets and revenue. Then read the return itself on ProPublica Nonprofit
+   assets and revenue. Then verify and extend from the return itself on ProPublica Nonprofit
    Explorer (projects.propublica.org/nonprofits), IRS Tax Exempt Organization
    Search (TEOS, apps.irs.gov/app/eos), or Candid. The Part-by-Part field guide
    is in [references/990-field-guide.md](references/990-field-guide.md).

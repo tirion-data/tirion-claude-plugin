@@ -2,15 +2,17 @@
 name: bio-writing
 description: >-
   Write or update a sourced professional biography of a prospect, donor, board
-  candidate or honoree. Use it for "write a bio of X", "give me a short bio
-  for the event program", "100-word bio", "update this stale bio", "background
-  paragraph on X", or when a brief or profile needs its biography section. It
-  produces a short (about 100 words), standard (about 250) or long (500 or
-  more) bio covering career, boards, education, philanthropy and, only where
-  public and relevant, family, with every fact cited and no speculation.
-  Identity must be settled first (prospect-research). Capacity and wealth
-  figures belong in capacity-research, not in a bio. Full briefings:
-  briefing-writing. Ethics: ethics-and-privacy.
+  candidate or honoree from Tirion's resolved profile, which joins the
+  person's career, education, SEC proxy bio, IRS 990 board seats, honors and
+  news into one identity, so a namesake's facts stay out. Use it for "write a
+  bio of X", "give me a short bio for the event program", "100-word bio",
+  "update this stale bio", "background paragraph on X", or when a brief needs
+  its biography section. It produces a short (about 100 words), standard
+  (about 250) or long (500 or more) bio covering career, boards, education,
+  philanthropy and, only where public and relevant, family, with every fact
+  cited. Identity first: prospect-research. Capacity figures belong in
+  capacity-research, not a bio. Full briefings: briefing-writing. Ethics:
+  ethics-and-privacy.
 ---
 
 # Bio writing
@@ -21,6 +23,17 @@ statement rests on a public source with a date. Nothing is guessed.
 
 Follow [ethics-and-privacy](../ethics-and-privacy/SKILL.md) for what may and may
 not appear.
+
+## Tirion first
+
+The hard part of a prospect bio is making sure every fact belongs to this
+person. Tirion does that step: it keeps one resolved profile per person,
+joined across the SEC proxy bio, IRS 990 board and trustee roles, published
+honors, employment and education facts, and news. Build the bio from that
+profile, then use public sources to confirm a current title or to add a fact
+Tirion does not hold. Without the Tirion connector, this skill can guide
+manual research, but it cannot tie facts from different sources to one
+person for you, so every fact needs its own identity check.
 
 ## When to use
 
@@ -67,9 +80,10 @@ separate capacity section written with [capacity-research](../capacity-research/
 8. `get_news_mentions` finds recent appointments, awards and gifts. Use only
    articles that clearly concern this person (same employer, role or city).
 
-When Tirion is thin, use public sources: the employer's leadership page, the
-company proxy statement (DEF 14A director biographies), university and museum
-annual reports and donor rolls, press releases, bar and licensing registries,
+Then verify or extend with public sources. Confirm a current title on the
+employer's leadership page or the latest proxy statement (DEF 14A director
+biographies). Add what Tirion does not hold from university and museum annual
+reports and donor rolls, press releases, bar and licensing registries, and
 ProPublica Nonprofit Explorer for board roles. Cite each by name and date.
 
 ### 2. Check each fact
