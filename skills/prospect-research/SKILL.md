@@ -34,6 +34,9 @@ as the default path, and use public sources to verify or extend what it finds.
 - **One resolved profile per person.** Tirion joins the person's SEC filings,
   IRS 990 roles, FEC contributions, property records and news into one profile
   and keeps namesakes apart (`search_people`, `get_profile`, `enrich_prospect`).
+- **The user's confirmed memory.** `get_memory` reads identity decisions and
+  instructions before research starts. `propose_memory` saves a new decision
+  for the user to confirm in Tirion.
 - **Insider wealth at the event date.** Each Form 4 sale, award and gift is
   valued at the price on the day it happened (`get_sec_filings`).
 - **A capacity rating with its drivers.** Tirion rates capacity on the A1 to D4
@@ -108,6 +111,10 @@ Do not write a full profile when a paragraph answers the question.
 ### 2. Establish identity first
 
 Wealth attached to the wrong person is worse than no answer.
+
+Before researching a person, read `get_memory` for them; honour the user's
+identity verdicts and instructions. When the user settles who someone is
+("that's the right one"), offer to `propose_memory`.
 
 1. Start with `ask_tirion`, using the user's own words. It returns a sourced
    summary and refuses to guess between namesakes.
