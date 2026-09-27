@@ -65,9 +65,8 @@ How to run them on each surface:
 ## What Tirion keeps, and for how long
 
 - **Reports** you create with `create_tirion_report` stay in your Tirion account until you delete them.
-- **Memories** you confirm (for example "that's the right Jane Doe") are kept for 24 months, then Tirion asks you to confirm them again. Proposed memories you never confirm are deleted after 30 days. Your preferences are kept until you delete them. You can view, edit or delete any memory in Tirion at /ai/memory.
+- **Memories** you confirm (for example "that's the right Jane Doe") expire after 24 months. Proposed memories you never confirm expire after 30 days. Your preferences are kept until you delete them. You can view, edit or delete any memory in Tirion at /ai/memory.
 - **Account records** of each connector call (which tool, when, and the lookups it used) are kept for billing, quota and security.
-- The questions you ask are processed to answer them; Tirion does not use them to train models.
 
 See Tirion's privacy policy: https://tiriondata.com/privacy
 
