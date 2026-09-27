@@ -62,6 +62,15 @@ How to run them on each surface:
 - **What it creates:** when you ask for a document to share, `create_tirion_report` saves a report in your Tirion account and returns a link (`report_url`) and a PDF link (`pdf_url`) on `app.tiriondata.com`. The report is private to you, or visible to your organization if you choose "org". Readers must be signed in to Tirion.
 - **Public sources:** when Claude verifies a fact, it may use your own web tools, if you have them, to read public pages such as SEC EDGAR or a county assessor's site. The plugin does not add a web tool.
 
+## What Tirion keeps, and for how long
+
+- **Reports** you create with `create_tirion_report` stay in your Tirion account until you delete them.
+- **Memories** you confirm (for example "that's the right Jane Doe") are kept for 24 months, then Tirion asks you to confirm them again. Proposed memories you never confirm are deleted after 30 days. Your preferences are kept until you delete them. You can view, edit or delete any memory in Tirion at /ai/memory.
+- **Account records** of each connector call (which tool, when, and the lookups it used) are kept for billing, quota and security.
+- The questions you ask are processed to answer them; Tirion does not use them to train models.
+
+See Tirion's privacy policy: https://tiriondata.com/privacy
+
 ## Tools the connector provides
 
 `ask_tirion`, `search_people`, `get_profile`, `get_bio`, `get_capacity`, `assess_wealth`, `get_entity_facts`, `get_recognitions`, `get_news_mentions`, `get_relationships`, `find_connections`, `get_nonprofit_connections`, `search_nonprofits`, `search_board_members`, `get_board_roster`, `search_foundations`, `search_foundations_by_cause`, `get_sec_filings`, `get_political_giving`, `search_political_donors`, `get_fec_committee`, `get_property_portfolio`, `search_properties`, `search_by_address`, `search_parcels`, `get_owner_footprint`, `get_owners_near`, `resolve_place`, `get_area_wealth_summary`, `get_area_prospects`, `discover_prospects`, `list_people_by_indicator`, `enrich_prospect`, `bulk_enrich`, `get_screening_template`, `get_screening_status`, `get_screening_results`, `propose_research`, `get_memory`, `propose_memory`, and `create_tirion_report` (creates a Tirion-hosted report and returns its links).
