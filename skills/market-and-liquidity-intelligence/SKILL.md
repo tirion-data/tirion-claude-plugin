@@ -101,7 +101,7 @@ After a liquidity event the right first contact is congratulatory: a note or cal
 1. `get_news_mentions` for the person or company. Results lead with confirmed matches, then recency.
 2. For each item, check the identity: does the article name the employer, city, title or family member that matches the person? An item matched on name alone may be about someone else. Many matches are about the organization the person leads, not the person.
 3. Label each item: **confirmed** (with the matching facts), **likely** (one matching fact), or **not confirmed**. Only confirmed items go into a briefing as facts.
-4. Supplement with a web search for recent months. Cite outlet and date.
+4. If the user wants the latest news and a web search tool is available, supplement with it for recent months. Cite outlet and date.
 5. For topics ("new foundations in Ohio", "tech exits in Austin"), start with `ask_tirion`, then search news and filings.
 
 ## Deliver

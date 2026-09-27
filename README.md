@@ -53,6 +53,23 @@ How to run them on each surface:
 - **Cowork (Claude Desktop):** type the same command in a Cowork task.
 - **Chat (claude.ai web, desktop and mobile):** there is no slash menu for plugin skills. Type the request in words, for example "brief Mary Barra of General Motors", and Claude applies the matching skill.
 
+## Examples
+
+- "Brief me on Mary Barra before Thursday's meeting. What's her giving capacity, and why?"
+- "Find prospects interested in college access and affordability living in Florida, and make it a Tirion report I can share."
+- "I'm in Palm Beach November 10 to 12. Who should I see, and in what order?"
+- "Which insiders at Intapp sold stock this year, and for how much?"
+- "Write a 250-word bio of Indra Nooyi for our gala program."
+- "Find all gifts of more than $25M and create an analytical report about them."
+
+## Troubleshooting
+
+- **Claude asks you to sign in to Tirion.** The first time the connector is used, sign in with your Tirion account. If sign-in fails, check that your Tirion account is active, or contact support.
+- **"Tirion could not identify this person" or several possible people.** Give a middle initial, a city, or an employer, and Claude will narrow it down. Tirion never merges two people who share a name.
+- **A report link asks you to sign in.** Tirion reports are private to your account (or your organization). Readers must be signed in to Tirion.
+- **"Tirion could not finish this request … quote incident …".** Try again in a minute. If it repeats, send the incident number to support.
+- **A place isn't recognized.** Name one county, city or metro area, such as "Palm Beach County, FL".
+
 ## What the plugin runs, sends and fetches
 
 - **It runs no code on your machine.** The plugin is Markdown skills plus one connector setting. It has no hooks, scripts or executables.

@@ -26,6 +26,9 @@ public source and date.
 Ethics apply to every step. Read [ethics-and-privacy](../ethics-and-privacy/SKILL.md)
 once per session before you research a person.
 
+
+**Other tools.** Use tools outside Tirion, such as web search, only when the user asks for research beyond Tirion or wants a fact checked against its source, and only if such a tool is available. Never call them just because a skill mentions a public source.
+
 ## Tirion first
 
 Tirion does the parts of this loop that take a researcher days by hand. Use it
