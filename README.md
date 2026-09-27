@@ -61,7 +61,6 @@ How to run them on each surface:
 - **What it fetches from Tirion:** public-record research results (profiles, filings, 990 roles, property, political giving, news, area statistics, capacity ratings).
 - **What it creates:** when you ask for a document to share, `create_tirion_report` saves a report in your Tirion account and returns a link (`report_url`) and a PDF link (`pdf_url`) on `app.tiriondata.com`. The report is private to you, or visible to your organization if you choose "org". Readers must be signed in to Tirion.
 - **Public sources:** when Claude verifies a fact, it may use your own web tools, if you have them, to read public pages such as SEC EDGAR or a county assessor's site. The plugin does not add a web tool.
-- **The eval suite** in `evals/` runs only when a developer runs `claude plugin eval`. It is not used in normal sessions. See [evals/README.md](evals/README.md).
 
 ## Tools the connector provides
 
@@ -69,20 +68,10 @@ How to run them on each surface:
 
 ## Install
 
-In Claude Code:
+Install **Tirion** from the plugin directory in the Claude apps (Customize > Plugins). It is then also available in your Claude Code sessions.
 
-```
-/plugin marketplace add tirion-data/tirion-claude-plugin
-/plugin install tirion@tirion
-```
+You need a Tirion account. Get one at [tiriondata.com](https://tiriondata.com). The first time Claude uses Tirion, it asks you to sign in.
 
-In the Claude apps, install **Tirion** from the plugin directory.
-
-You need a Tirion account. Get one at [tiriondata.com](https://tiriondata.com).
-
-## Evals
-
-`evals/` holds a live eval suite of ten cases for `claude plugin eval`. It needs a Tirion API key. See [evals/README.md](evals/README.md).
 
 ## Principles
 
@@ -90,6 +79,10 @@ You need a Tirion account. Get one at [tiriondata.com](https://tiriondata.com).
 - **Identity first.** Claude confirms it has the right person before it researches them, and it never merges two people who share a name.
 - **Capacity is a range with its reasons.** It is never a bare number.
 - **Ethical by default.** No private contact details and no sensitive personal categories. Research follows the Apra Principles of Ethics and Compliance.
+
+## Privacy
+
+Tirion's privacy policy: https://tiriondata.com/privacy
 
 ## Support
 
