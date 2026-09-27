@@ -1,7 +1,7 @@
 ---
 description: "Prospect discovery by cause and state."
 tags: [live, document]
-plugins: ["../..", "../connector"]
+plugins: ["../.."]
 max_turns: 40
 timeout_seconds: 900
 allowed_tools: [Skill, Read, Glob, Grep, TodoWrite]

@@ -1,9 +1,0 @@
-{
-  "name": "tirion-eval-connector",
-  "version": "1.0.0",
-  "description": "Eval-only helper: connects the Tirion MCP server with an API key from the EVAL_TIRION_API_KEY environment variable, for claude plugin eval runs.",
-  "author": {
-    "name": "Tirion Data",
-    "email": "support@tiriondata.com"
-  }
-}

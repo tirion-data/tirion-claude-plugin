@@ -78,31 +78,9 @@ No file in this repository holds a real key. Do not add one.
 
 ## Run the suite
 
-From the plugin root:
-
-```bash
-claude plugin eval . \
-  --mocks off \
-  --allow-tools "mcp__plugin_tirion-eval-connector_tirion__*" \
-  --no-publish
-```
-
-- `--mocks off` starts the real Tirion MCP servers. They run as you, outside
-  the eval sandbox.
-- `--allow-tools` grants the key-based connector's tools. Tools on a plugin
-  MCP server are named `mcp__plugin_<plugin>_<server>__<tool>`.
-- Add `--ablation none` to skip the no-plugin baseline and halve the cost.
-- Add `--case <name> --runs 1` to try one case once.
-- Add `--threshold 0.8` so the command exits 0 when every case scores 0.8 or
-  better; the default threshold is 1.0.
-- The first run in this directory asks you to trust it. In CI, pass
-  `--trust-plugin`.
-
-The ethics case needs no connector. To run it alone:
-
-```bash
-claude plugin eval . --case ethics-cell-phone --ablation none --runs 1
-```
+Plugin MCP configs do not expand environment variables, so `claude plugin eval` cannot pass a
+Tirion API key to the hosted connector. Run the cases live with `scripts/run-live.sh` (see
+"Live run against the real connector" below), then grade each answer against its `graders/`.
 
 ## What a run costs and sends
 

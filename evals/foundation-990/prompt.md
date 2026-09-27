@@ -1,7 +1,7 @@
 ---
 description: "990-PF question about a named family foundation."
 tags: [live]
-plugins: ["../..", "../connector"]
+plugins: ["../.."]
 max_turns: 40
 timeout_seconds: 900
 allowed_tools: [Skill, Read, Glob, Grep, TodoWrite]

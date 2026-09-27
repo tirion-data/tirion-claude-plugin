@@ -1,7 +1,7 @@
 ---
 description: "Trip plan for Palm Beach with a shareable report."
 tags: [live, document]
-plugins: ["../..", "../connector"]
+plugins: ["../.."]
 max_turns: 40
 timeout_seconds: 900
 allowed_tools: [Skill, Read, Glob, Grep, TodoWrite]
