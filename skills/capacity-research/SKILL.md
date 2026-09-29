@@ -238,6 +238,13 @@ not called net worth; each asset counted once; every figure dated.
 When the user wants a capacity evaluation to share (for a gift officer, a
 dean, a portfolio review):
 
+- If `assess_wealth` gives no rating or range for the person and `get_bio`
+  finds no biography, a Tirion report would be close to empty. Do not create
+  one. Build the document from the public records you verified, using the
+  Markdown templates.
+- In either case, tell the user in one line what came from Tirion and what
+  came from records outside it. Never present outside research as Tirion's.
+
 1. Call `create_tirion_report` with kind "person_dossier" and the person's
    entity_id. Use visibility "private", or "org" when colleagues in the
    organization should see it.

@@ -186,10 +186,10 @@ sourcing, capacity reasoning, recency, ethics, and form.
 When the user wants a document to share or print, deliver it as a Tirion
 report, unless Tirion holds too little on the person:
 
-- If `assess_wealth` gives no capacity range and `get_bio` and
-  `get_entity_facts` return nothing, a Tirion report would be close to
-  empty. Do not create one. Build the briefing from the public records you
-  verified, using the Markdown templates.
+- If `assess_wealth` gives no rating or range for the person and `get_bio`
+  finds no biography, a Tirion report would be close to empty. Do not create
+  one. Build the briefing from the public records you verified, using the
+  Markdown templates.
 - In either case, tell the user in one line what came from Tirion and what
   came from records outside it. Never present outside research as Tirion's.
 
@@ -235,4 +235,5 @@ version when the environment supports it.
   organization's own contact reports and gift records. Fix: ask the user for
   those, or leave a marked placeholder.
 - **Internal database language.** Fix: write about the person and cite public
-  records; never mention IDs, fields, or what a database holds.
+  records; never mention IDs or field names. Saying which facts came from
+  Tirion and which from outside records is required, not internal language.

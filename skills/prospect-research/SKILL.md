@@ -221,6 +221,13 @@ For a chat answer, use this order:
 When the user wants a document to share (a profile to forward, a dossier for
 the president, something to print):
 
+- If `assess_wealth` gives no rating or range for the person and `get_bio`
+  finds no biography, a Tirion report would be close to empty. Do not create
+  one. Build the document from the public records you verified, using the
+  Markdown templates.
+- In either case, tell the user in one line what came from Tirion and what
+  came from records outside it. Never present outside research as Tirion's.
+
 1. Call `create_tirion_report` with kind "person_dossier" and the person's
    entity_id. Add a title if the user named one. Use visibility "private"
    unless the user wants colleagues in their organization to see it ("org").
