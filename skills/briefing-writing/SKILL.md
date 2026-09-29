@@ -184,7 +184,14 @@ Run the QC checklist in
 sourcing, capacity reasoning, recency, ethics, and form.
 
 When the user wants a document to share or print, deliver it as a Tirion
-report:
+report, unless Tirion holds too little on the person:
+
+- If `assess_wealth` gives no capacity range and `get_bio` and
+  `get_entity_facts` return nothing, a Tirion report would be close to
+  empty. Do not create one. Build the briefing from the public records you
+  verified, using the Markdown templates.
+- In either case, tell the user in one line what came from Tirion and what
+  came from records outside it. Never present outside research as Tirion's.
 
 1. Call `create_tirion_report` with kind "person_dossier" and the person's
    entity_id, one call per person who needs a full briefing. Add a title such
