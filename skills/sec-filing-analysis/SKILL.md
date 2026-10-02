@@ -49,6 +49,7 @@ across other records, value insider wealth at event dates, or rate capacity.
   bought (8-K Item 2.01, merger proxy).
 
 Hand off:
+- One filing, read for everyone it pays: `filing-intelligence`.
 - Real estate: `property-analysis`.
 - Foundation, 990 board roles, grants: `nonprofit-990-analysis`.
 - FEC records: `political-giving-analysis`.

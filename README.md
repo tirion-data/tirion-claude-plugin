@@ -32,6 +32,7 @@ Sign in with your Tirion account the first time Claude uses it. The skills use p
 | `prioritizing-prospects` | Qualify and tier a pool or portfolio; screen a list |
 | `market-and-liquidity-intelligence` | Understand wealth in a place, and act on M&A, IPOs and big stock sales |
 | `sec-filing-analysis` | Read Forms 3/4/5, 13D/G, proxies, S-1s and 8-Ks for prospect research |
+| `filing-intelligence` | Read one filing for who makes money, how, how much and when, and who each person is. |
 | `nonprofit-990-analysis` | Read Forms 990 and 990-PF: board roles, grants, foundation assets |
 | `property-analysis` | Read real estate records: assessed vs market value, trusts and LLCs, second homes |
 | `political-giving-analysis` | Use FEC records as a capacity and affinity signal, with care |
