@@ -35,16 +35,17 @@ can read it.
 | About 5% of estimated net worth over 5 years | The common starting point. |
 | 1-3% of net worth | Cautious: little giving history, illiquid wealth, young family, or peak-career spending. |
 | 3-5% | Some giving history. |
-| 5-10% | Active philanthropist: foundation, board service, named gifts. |
-| 10-25% or more | Proven major donor, legacy-minded, or planning a transformational gift. |
+| 5-10% | Active philanthropist with documented personal gifts. Board service alone is not a gift. |
+| 10-25% or more | Proven major donor, or publicly stated plans for a legacy or transformational gift. Never infer planned-giving interest from age. |
 
 Adjust up for liquid wealth, later life stage, no dependents, and a recent
 liquidity event. Adjust down for concentrated or illiquid holdings, heavy debt,
 and large pledges elsewhere.
 
 Critics note that the 5% convention can understate the very wealthy because it
-ignores invested assets, foundations and donor-advised funds. When you can see
-holdings, build from the assets (section 3) and use the percentage as a check.
+misses invested assets. When you can see holdings, build from the assets
+(section 3) and use the percentage as a check. Keep foundation assets and
+donor-advised funds outside personal capacity.
 
 ## 3. Asset back-solve conventions
 
@@ -169,8 +170,9 @@ recent close, and date it.
 
 Private foundations must distribute about 5% of net investment assets a year
 (Internal Revenue Code section 4942). Foundation assets therefore imply the annual
-grant budget. Foundation assets are not the founder's personal wealth, but a large
-foundation shows both inclination and substantial family wealth.
+grant budget. Foundation assets are never personal capacity. Use the published
+mission and grant pattern as evidence of the foundation's intent, not proof
+of a family member's motives or personal gifts.
 
 990 data trails by one to two years. Always name the fiscal year.
 
@@ -178,6 +180,9 @@ foundation shows both inclination and substantial family wealth.
 
 Capacity is the ceiling. Most shops set the ask by inclination and affinity. A
 common scheme:
+
+Missing giving evidence is unknown, not zero. Keep an ask provisional when
+inclination is unknown; the table does not establish unwillingness to give.
 
 | Evidence | Ask range |
 |---|---|

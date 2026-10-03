@@ -42,6 +42,8 @@ Read the current text at aprahome.org before you quote it; this skill paraphrase
 
 **Public record only.** Use government filings (SEC, IRS Form 990, FEC, county property and court records), published news, institutional publications (annual reports, donor rolls, board lists) and information the prospect has made public. Do not use leaked, hacked or illegally obtained data, however useful it looks.
 
+**Why they give.** Motivation work uses public, sourced evidence only, with a record and date for each claim. Label inference as inference. Do not speculate about health, mortality, family conflict or private life. Never infer planned-giving interest from age. Use the person's public statements to describe legacy intentions; wealth, board service and family ties alone do not establish them.
+
 **Need to know.** Collect and share the minimum that serves the purpose. A gift officer preparing a visit needs capacity, interests, relationships and recent events. They do not need a list of every lawsuit in the county.
 
 **The "explain it to the prospect" test.** If you would be uncomfortable explaining to the prospect how you found a fact, or why it is in the file, leave it out.

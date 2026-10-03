@@ -38,6 +38,14 @@ Organization's rating: <if provided, with date>; officer's expected next gift: <
 ## Interests and philanthropy
 - <cause, board, named gift, foundation grant, with year> [n]
 
+## Why they give
+<2-5 sourced sentences on motivation: board years and tenure; foundation mission
+and grants by cause; their public words, donor stories, important people or
+interests. Choose the strongest evidence. Cite each claim's record and date.
+Label inference; if unknown, say so.>
+**How we fit:** <1-2 sentences linking that pattern to our cause. Cite the basis;
+label a proposed fit as inference. If our cause is not known, ask.>
+
 ## Ties to us and warm paths
 - <shared board, alumni status, past gift, mutual contacts, and who can help> [n]
 
@@ -64,5 +72,7 @@ Notes:
 - For a president who wants three to six pages, use
   [presidential-briefing.md](presidential-briefing.md).
 - Talking points connect their interest to a specific need. Three is enough.
+- Keep "Why they give" within the page limit by cutting repeated background
+  and philanthropy detail. Do not fill it with guesses when evidence is thin.
 - "Our history with them" comes from the user. If it was not provided, write
   "Not provided. Ask <officer> before the meeting."

@@ -8,7 +8,8 @@ description: >-
   before my meeting with X", "one-pager on X for the president",
   "presidential briefing", "prospect research profile", "full PRP on X",
   "capacity evaluation on X", "briefing book for the gala", "who is in the
-  room at Thursday's dinner", or "cards for each attendee". Covers a one-page
+  room at Thursday's dinner", "cards for each attendee", or "help me
+  understand why X gives before we meet". Covers a one-page
   brief, a presidential briefing, a PRP, a capacity evaluation, and an event
   or trip packet. Unconfirmed attendees are listed with the question that
   would settle each. Uses prospect-research, capacity-research, bio-writing
@@ -163,6 +164,33 @@ Use the template for the deliverable. Keep each section to what serves the
 meeting. Put detail in tables. Leave out any section with nothing sourced to say,
 rather than filling it with guesses.
 
+#### Why they give
+
+For the one-page, presidential, PRP and capacity evaluation formats, write
+2-5 sourced sentences on motivation and fit. This matters especially for
+planned and legacy gifts: where could our cause fit in their life story?
+Use the strongest relevant evidence, not a list of everything found:
+
+- Board service: `get_nonprofit_connections`; give years and documented
+  tenure. Gaps between filings do not prove continuous service. Service is
+  evidence of commitment, not a gift.
+- Family foundation: `search_foundations`, `search_nonprofits` and the 990
+  returns; compare its published mission with grants by cause across years.
+  Attribute intent to the foundation, including stated aims across generations.
+- Their own words: `get_news_mentions` and `get_bio`; look for early-career
+  interviews, public statements, gift announcements and donor stories
+  published by recipient organizations.
+- Important people and family ties: `get_relationships`; include relevant
+  public adult relationships. A tie alone does not establish influence.
+- Interests: `get_entity_facts`; use dated evidence of what they care about.
+
+Cite a record and date for every motivation claim. Label inference as
+inference; capacity alone never establishes a motive. If evidence is thin,
+state what is unknown instead of filling the sentence count. End the section
+with **How we fit:** one or two sentences linking the sourced pattern to the
+user's cause. Mark a proposed fit as inference; if the cause is unknown, ask
+for it. Keep the template's length limit by cutting repeated background.
+
 ### 5. Handle people you cannot identify with confidence
 
 Event lists and trip lists often carry a name with no other detail. Do not guess.
@@ -204,6 +232,8 @@ report, unless Tirion holds too little on the person:
    the purpose of the meeting, the recommended ask or next step, three
    talking points, what to avoid, and the unknowns. This is the part the
    report does not know: the organization's goal for this meeting.
+   Include the sourced "Why they give" and "How we fit" here if the report
+   does not cover them.
 
 Use the Markdown templates in the table above when `create_tirion_report` is
 not in your tool list, or for content Tirion's reports do not cover, such as
@@ -214,6 +244,9 @@ version when the environment supports it.
 
 ## Pitfalls
 
+- **Showing internal IDs.** Tirion profile and entity IDs are for tool calls only.
+  Never print one in the answer or the report; name the person and cite the
+  public records that identify them.
 - **Biography instead of strategy.** A CV does not prepare anyone for a
   conversation. Fix: objectives, talking points and the ask come first.
 - **A profile with no family, giving or contact sections.** Research shops

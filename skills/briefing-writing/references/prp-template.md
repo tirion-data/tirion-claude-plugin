@@ -125,6 +125,15 @@ fact ties the listing to the prospect.
 | Foundation | Role | Total assets (FY) | Grants paid (FY) | Main grant areas | Source |
 |---|---|---|---|---|---|
 
+## Why they give
+<2-5 sourced sentences connecting their life story to giving: board years and
+tenure; the foundation's mission and grants by cause across years; their public
+statements and donor stories; important people, family ties and interests.
+Choose the strongest evidence. Cite a record and date for every claim. Label
+inference; if unknown, say so.>
+**How we fit:** <1-2 sentences linking that pattern to our cause. Cite the basis;
+label a proposed fit as inference. If our cause is not known, ask.>
+
 ## Giving to our organization
 From the organization's records. Say who provided them and when.
 
@@ -190,6 +199,8 @@ Notes:
   write what is unknown in "What we do not know".
 - Keep capacity separate from the philanthropy and relationship sections. The ask
   range is where they meet.
+- "Why they give" explains motivation, not means. Keep it short even in a
+  full PRP, especially when evidence is thin; do not repeat the biography.
 - "Giving to our organization", "Contact history" and the organization's rating
   come from the user, not from public records. Ask for them. Never invent them.
 - For an organization or a foundation as the prospect, replace Identity, Family
