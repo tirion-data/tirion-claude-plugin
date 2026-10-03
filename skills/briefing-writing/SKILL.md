@@ -8,7 +8,8 @@ description: >-
   before my meeting with X", "one-pager on X for the president",
   "presidential briefing", "prospect research profile", "full PRP on X",
   "capacity evaluation on X", "briefing book for the gala", "who is in the
-  room at Thursday's dinner", or "cards for each attendee". Covers a one-page
+  room at Thursday's dinner", "cards for each attendee", or "help me
+  understand why X gives before we meet". Covers a one-page
   brief, a presidential briefing, a PRP, a capacity evaluation, and an event
   or trip packet. Unconfirmed attendees are listed with the question that
   would settle each. Uses prospect-research, capacity-research, bio-writing

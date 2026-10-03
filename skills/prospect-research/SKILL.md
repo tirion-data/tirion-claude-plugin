@@ -7,7 +7,9 @@ description: >-
   A1-D4 capacity rating and insider wealth valued at each event's date. Use it
   for "research this prospect", "tell me about X before my meeting", "is X a
   major-gift prospect", "who is X and what could they give", "qualify this
-  name", or a bare name with "prospect?". It confirms identity, weighs
+  name", a bare name with "prospect?", and the why: "why does X give", "what
+  motivates X's philanthropy", "where does X give", "would X care about our
+  cause", or preparing a legacy or planned-giving conversation. It confirms identity, weighs
   capacity, inclination and affinity separately, runs a QC check, and delivers
   a sourced answer or a shareable Tirion report. Routes to capacity-research,
   bio-writing, briefing-writing, market-and-liquidity-intelligence,
