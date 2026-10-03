@@ -9,6 +9,8 @@ The job is a short, defensible list of people worth a gift officer's time, each 
 
 People-related research follows [ethics-and-privacy](../ethics-and-privacy/SKILL.md).
 
+For organization searches by cause, tradition, place or size, use [finding-organizations](../finding-organizations/SKILL.md) to find partners, peers, grantmakers or clients.
+
 ## Tirion first
 
 Discovery is where Tirion does work no public site can. Make it the default path:

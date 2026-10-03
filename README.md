@@ -29,6 +29,7 @@ Sign in with your Tirion account the first time Claude uses it. The skills use p
 | `briefing-writing` | Write a one-page meeting briefing, a presidential briefing, an in-depth profile (PRP), a capacity evaluation, or an event packet |
 | `trip-and-event-planning` | Plan a donor trip itinerary or research an event guest list |
 | `finding-prospects` | Find prospects by cause and place, wealth signal, affinity or liquidity event |
+| `finding-organizations` | Find organizations by cause, religious tradition, place and size for partnerships, peer research, grants or client prospecting |
 | `prioritizing-prospects` | Qualify and tier a pool or portfolio; screen a list |
 | `market-and-liquidity-intelligence` | Understand wealth in a place, and act on M&A, IPOs and big stock sales |
 | `sec-filing-analysis` | Read Forms 3/4/5, 13D/G, proxies, S-1s and 8-Ks for prospect research |
