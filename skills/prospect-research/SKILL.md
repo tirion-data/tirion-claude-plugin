@@ -98,6 +98,11 @@ then call the specialist for its part.
 
 ## Method
 
+Research has three levels: **who** identifies the person and their story;
+**how** explains capacity and the source of wealth; **why** explores their
+motivation and where our organization fits in that story. The why matters
+especially for planned and legacy gifts. Keep each level grounded in evidence.
+
 ### 1. Scope the job
 
 Decide the depth before you touch data. Match the output to who will read it and
@@ -166,14 +171,39 @@ Rules for this step:
 - If Tirion is thin and the user wants deeper work, `propose_research` says what
   research would add and what it costs.
 
+For **why they give**, follow these evidence steps:
+
+1. Read `get_bio` and `get_news_mentions` for biography, early-career
+   interviews, the person's own public statements, gift announcements and
+   donor stories published by organizations. Distinguish their words from
+   the organization's account.
+2. Use `get_nonprofit_connections` for board roles, years and documented
+   tenure. Do not assume continuous service between isolated filings.
+3. Find the family foundation with `search_foundations`. Use `search_nonprofits`
+   and nonprofit 990 data to compare its published mission with grants by cause
+   across years. Read stated intent across generations without assigning it
+   to every family member. Foundation assets are never personal capacity.
+4. Use `get_relationships` for important people and relevant public adult
+   family ties, and `get_entity_facts` for interests. A relationship alone
+   does not prove that someone shaped the prospect's giving.
+5. Write the supported motivation with record and date; label inference as
+   inference. End with **How we fit:** one or two sentences linking the
+   pattern to the user's cause. Mark a proposed fit as inference. If the cause
+   or motivation is unknown, say what would settle it.
+
+Use only public, sourced evidence for motivation. Follow ethics-and-privacy:
+no speculation about private life, and no planned-giving inference from age.
+
 ### 4. Assess the four dimensions separately
 
 - **Capacity**: what they could give over 3 to 5 years if they chose to.
   Hand off to [capacity-research](../capacity-research/SKILL.md). It returns a
   range, the drivers, the exclusions and a confidence.
-- **Inclination**: evidence that they give at all. Named gifts, donor rolls,
-  foundation grants (990-PF Part XIV, Supplementary Information), nonprofit board service, pledges reported
-  in the press.
+- **Inclination**: evidence of giving and why they give. Named gifts, donor
+  rolls, public statements and reported pledges. Foundation grants show the
+  foundation's giving, not personal gifts by its trustees. Board service
+  shows commitment, not a gift. Missing giving evidence is unknown, not zero;
+  capacity alone never establishes motivation.
 - **Affinity**: evidence of a tie to the user's organization or its mission.
   Degrees, past gifts, volunteer roles, event attendance, cause giving that
   matches the mission.
@@ -213,7 +243,7 @@ For a chat answer, use this order:
    strongest interest and tie, the recommended next step.
 2. Capacity (range, drivers, what is excluded, confidence).
 3. Recent events, with dates.
-4. Philanthropy and interests.
+4. Philanthropy and interests, including "Why they give" and "How we fit".
 5. Relationships and warm paths.
 6. Gaps and how to close them.
 7. Sources (numbered: record, date, URL).
@@ -235,7 +265,8 @@ the president, something to print):
    that the report opens in Tirion and that each reader must be signed in to
    Tirion.
 3. In the chat, write your own analysis as the cover note: the conclusion, the
-   recommended next step, and the gaps. Do not paste the whole report.
+   recommended next step, and the gaps. Include sourced motivation and fit if
+   the report does not cover them. Do not paste the whole report.
 
 If `create_tirion_report` is not in your tool list, or the user wants a format
 Tirion's reports do not cover, use the templates in briefing-writing. Every

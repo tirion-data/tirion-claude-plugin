@@ -23,6 +23,10 @@ range from public evidence of assets and income, states what drives it and what
 it leaves out, and turns it into an ask range by weighing inclination and
 affinity.
 
+Inclination (why they give) is separate from capacity (how much they could
+give). Wealth alone does not establish motivation. Board service is not a
+gift. Missing giving evidence is unknown, not zero.
+
 Every number here is an estimate from public records. Say so. Follow
 [ethics-and-privacy](../ethics-and-privacy/SKILL.md): public and properly sourced
 information only.
@@ -161,7 +165,8 @@ person controls it.
 - A private foundation files Form 990-PF. Part XIV (Supplementary Information,
   line 3) lists grants paid; older returns call it Part XV. Page 1, item I, gives
   total assets at fair market value. Private foundations must pay out about 5% of assets a year, so assets
-  imply the annual grant budget. Foundation assets are not personal wealth.
+  imply the annual grant budget. Foundation assets are never personal capacity;
+  foundation grants are not the trustees' personal gifts.
 - Schedule B donor names are withheld from public copies of Form 990 and 990-EZ
   for public charities, so a charity's donors cannot be read there. A private
   foundation's 990-PF Schedule B is public and names who funded it.
@@ -201,8 +206,9 @@ person controls it.
 5. Place the result on the ladder. When the range spans two tiers, give both.
 
 Only assets the person controls drive the rating. A spouse's separate assets, a
-parent's estate, or a family foundation the person does not control are upside.
-List them on their own line.
+parent's estate or a family trust may be noted separately as possible upside,
+with its basis. Foundation assets stay outside personal capacity, even when
+the person controls grant decisions.
 
 ### 4. Set confidence
 
@@ -221,10 +227,13 @@ often sits in private assets.
 
 ### 5. Turn capacity into an ask range
 
-Capacity is the ceiling. The ask depends on inclination (do they give?) and
+Capacity is the ceiling. The ask depends on inclination (do they give, and why?) and
 affinity (do they care about us?). Use the adjustment table in the reference
 file, state which evidence placed the prospect there, and add timing: a recent
 liquidity event, a campaign, a plan year.
+
+If giving evidence is missing, keep inclination unknown and the ask provisional.
+Do not treat an unknown as zero giving or evidence of unwillingness.
 
 ### 6. Check your work
 
@@ -293,8 +302,8 @@ Write dollar amounts in the deliverable with a dollar sign as usual.
 - **Proceeds as net worth.** Fix: report proceeds as dated liquidity.
 - **Double counting.** The Form 4 holding and the proxy ownership row are the same
   shares. Fix: one line per asset.
-- **Foundation assets as personal wealth.** Fix: count them as inclination and as
-  a floor on family wealth, not as the person's assets.
+- **Foundation assets as personal wealth.** Fix: exclude them from personal
+  capacity. Use the foundation's mission and grant pattern to describe its intent.
 - **Stale holdings.** Fix: date every holding; mark departed insiders.
 - **Giving history inflating capacity.** Fix: use giving in the ask range, not in
   the capacity figure.

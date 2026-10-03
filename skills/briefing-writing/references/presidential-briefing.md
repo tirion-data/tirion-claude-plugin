@@ -91,6 +91,14 @@ Confidence: <level>, because <reason>. Upside not in the range: <...>.
 Unknown: <what, and what would settle it>.
 Organization's rating: <officer or overall rating, date>; research rating: <tier>. <Note any gap; do not merge.>
 
+## Why they give
+<2-5 sourced sentences on motivation and fit: board years and tenure; foundation
+mission and grant pattern by cause; their own public statements, donor stories,
+important people and interests. Use the strongest evidence, with a record and
+date for each claim. Label inference; if unknown, say so.>
+**How we fit:** <1-2 sentences linking that pattern to our cause. Cite the basis;
+label a proposed fit as inference. If our cause is not known, ask.>
+
 ## Giving to our organization
 | Donor or vehicle | Outright gifts | Outstanding commitments | Total |
 |---|---|---|---|
@@ -133,4 +141,5 @@ Notes:
   history to the whole relationship, and add a line "Relationship owner and
   history: <who has carried the relationship, and since when>".
 - Keep the whole document to six pages. Cut affiliations and wealth detail
-  before you cut strategy, giving, or contact history.
+  before you cut strategy, giving, or contact history. Keep "Why they give"
+  brief; do not repeat the biography or fill gaps with guesses.

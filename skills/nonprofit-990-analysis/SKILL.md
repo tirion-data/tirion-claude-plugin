@@ -23,7 +23,7 @@ For prospect research it answers three questions:
 - **Where does this person serve?** Board, officer and trustee roles show
   affinity and network.
 - **Does this family have a private foundation, and what does it fund?** A
-  990-PF gives a capacity floor, the family's causes and giving geography.
+  990-PF shows the foundation's resources, causes and giving geography.
 - **Who decides?** Trustees and officers of a family foundation are the
   people who approve grants.
 
@@ -82,8 +82,8 @@ Hand off:
 - For a family foundation: fair-market-value assets, annual grants paid,
   payout rate, top grantees by amount and purpose, giving geography, and the
   trustees, each with the fiscal year of the return.
-- A plain reading: what the foundation says about the family's capacity
-  floor and interests, and who makes decisions.
+- A plain reading: what the foundation's mission and grants show about its
+  intent, and who makes decisions. Foundation assets are never personal capacity.
 - Gaps named: filing lag, a DAF that hides the donor, a Schedule B that is
   redacted.
 - Every fact cited: "IRS Form 990-PF, FY2023, Part XIV", with a link.
@@ -122,9 +122,9 @@ Hand off:
    Key items for a 990-PF:
    - Page 1 header item I: fair market value of all assets at year end.
    - Part I, line 25: contributions, gifts and grants paid.
-   - Part I, line 1: contributions received. A large gift in means the family
-     funded it that year. Schedule B names the contributors (public for
-     private foundations).
+   - Part I, line 1: contributions received. Check Schedule B for who funded
+     it that year (public for private foundations); do not assume the donor
+     was a family member.
    - Part II: the balance sheet, including investments by type.
    - "Information About Officers, Directors, Trustees": trustees and
      officers, with pay and hours (Part VII on recent returns, Part VIII on
@@ -148,12 +148,16 @@ Hand off:
    year can be made up later; read two or three years.
 
 8. **Read the family-foundation signals as a researcher.**
-   - **Capacity floor.** Assets in the foundation are no longer the family's
-     personal wealth. They do show that the family once had at least that
-     much to give away. Treat the funding history (Part I line 1 across years)
-     as evidence of past liquidity.
-   - **Interests.** Grant purposes show causes. Say "the foundation funds"
-     not "the family believes".
+   - **Intent.** Read the published mission statement alongside the grant
+     pattern by cause across years. Look for stated aims across generations,
+     repeat priorities and changes. Cite the mission's source and date and
+     each return's fiscal year; label any inference as inference.
+   - **Personal wealth.** Foundation assets are never personal capacity,
+     even when the prospect is a trustee. Attribute a contribution to a
+     person only when a record names that donor; totals alone do not do so.
+   - **Interests.** Say "the foundation funds", not "the family believes".
+     Its mission and grants show the foundation's intent. They do not establish
+     every family member's motives or personal gifts.
    - **Geography.** Recipient cities show where the family gives.
    - **Decision-makers.** Trustees approve grants. Adult children who become
      trustees are the next generation of decision-makers.
@@ -172,7 +176,7 @@ Hand off:
 10. **Look at board networks.** `get_board_roster` lists the board of one
     organization. `search_board_members` finds people who sit on several
     boards, by name or state. Board service is an affinity signal: the person
-    gives time to the cause, and board members are often expected to give.
+    gives time to the cause. Board service is not evidence of a gift.
     Multiple boards mark a connector. A shared board is a possible warm path
     between the prospect and your own trustees. Same-name board members are
     not the same person until linked.
@@ -192,7 +196,7 @@ Hand off:
 
 | Trap | Fix |
 |---|---|
-| Counting foundation assets as personal net worth | Foundation assets are irrevocably given. Use them as a floor on past wealth and as proof of a giving vehicle. |
+| Counting foundation assets as personal net worth | Keep them out of personal capacity. Read the mission and grants as evidence of the foundation's intent. |
 | Quoting a 990 figure without the year | 990s lag one to two years. Always give the fiscal year. |
 | Reading a surname foundation as the prospect's | Confirm with a trustee, address or published link. |
 | Assuming no role because the latest return omits it | Returns lag. Say "not listed on the FY<year> return". |
@@ -225,8 +229,10 @@ warm path.>
 | Recipient | City, State | Purpose | Amount |
 |---|---|---|---|
 
-**Reading.** <Capacity floor; interests by purpose; geography; who decides;
-open to proposals or preselected only.>
+**Reading.** <Published mission and grant pattern by cause, including stated
+intent across generations; geography; who decides; open to proposals or
+preselected only. Cite sources and dates; label inference. Foundation assets
+are not personal capacity.>
 
 ## Warm paths
 <Shared boards with our trustees or volunteers, with the filing that shows each.>

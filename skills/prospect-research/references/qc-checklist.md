@@ -21,6 +21,9 @@ normal. Fix it and run the list again.
 | Every material fact names its record and date: "SEC Form 4, filed 2026-08-24", "Palm Beach County Property Appraiser, 2026 roll", "IRS Form 990-PF, FY2023, Part XIV", "FEC, 2024 cycle". | Add the record and date, or drop the fact. |
 | URLs are included where a tool or search returned one. | Add them to the Sources list. |
 | Inferences are labeled as inferences and state their basis. | Rewrite as "Inferred from (fact): ..." |
+| Every motivation claim cites a public record and date. | Add the source and date, or state that motivation is unknown. |
+| Inference about motivation or "How we fit" is labeled as inference. | Name the evidence and distinguish the proposed fit from the prospect's stated intent. |
+| No motive is asserted from capacity alone. | Remove the claim; wealth shows means, not reasons for giving. |
 | News facts come from articles that show the subject (same employer, role or city). | Drop articles that only match the name. |
 | Conflicts between sources are shown, not silently resolved. | State both values and which source is more recent or more direct. |
 | Prefer primary records (government filings, the organization's own report) over press, and press over vendor scores. | Replace a secondary source with the primary one where you can find it. |
@@ -33,7 +36,8 @@ normal. Fix it and run the list again.
 | Assessed property value is not called market value. | Say "assessed" and, where relevant, how the county's assessment relates to market (for example, California's Proposition 13 keeps long-held assessments below market). |
 | Stock awards, options and unvested shares are not called cash. | Separate vested and sold from granted and unvested. |
 | Gross sale proceeds are not called net worth. | Call them proceeds, dated, before tax. |
-| Foundation assets are not called personal wealth. | Call them foundation assets and use them as evidence of inclination and a floor on family wealth. |
+| Foundation assets are never personal capacity. | Exclude them from personal wealth and capacity; use the mission and grant pattern as evidence of the foundation's intent. |
+| Board service is not counted as a gift; missing giving evidence is unknown, not zero. | Separate service from gifts and name the evidence gap. |
 | Capacity is kept separate from inclination and affinity. | State capacity first, then say how inclination and affinity shape the ask. |
 | Visible assets are treated as a floor, with a note on what may sit above them. | Add the upside and its basis (private company, partnership, trust). |
 | Assets are counted once. A Form 4 holding and the same shares in the proxy ownership table are one asset. | Deduplicate. |

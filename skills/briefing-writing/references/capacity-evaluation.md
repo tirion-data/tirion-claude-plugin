@@ -60,6 +60,14 @@ the organization's records. Say who provided them.>
 <Degrees, volunteer roles, board or council service, event attendance, relatives
 who are alumni.>
 
+## Why they give
+<2-5 sourced sentences on inclination, separate from capacity: board years and
+tenure; foundation mission and grants by cause; their public statements, donor
+stories, important people and interests. Choose the strongest evidence. Cite
+each claim's record and date. Label inference; missing evidence is unknown.>
+**How we fit:** <1-2 sentences linking that pattern to our cause. Cite the basis;
+label a proposed fit as inference. If our cause is not known, ask.>
+
 ## Capacity
 **Major gift capacity: <low> to <high> (tier), over 3-5 years, based on <indicators>.**
 Confidence: <higher | moderate | lower>, because <reason>.
@@ -74,6 +82,8 @@ Organization's rating: <if provided, with date>. <Note any gap of more than one 
 Notes:
 
 - Bullet-point prose is the norm here, not tables. Keep it short.
+- Keep "Why they give" within the two-page limit and separate from the
+  capacity calculation. Board service is not a gift; do not guess at motives.
 - Every dollar figure carries its record and date in the sentence.
 - Rate the person, not the household: a spouse's separate assets and family
   wealth go on the upside line.

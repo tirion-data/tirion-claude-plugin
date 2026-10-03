@@ -115,14 +115,17 @@ ProPublica Nonprofit Explorer for board roles. Cite each by name and date.
 - Philanthropy: named gifts, foundation roles, campaign leadership, with year and
   source. State the gift only as the recipient published it ("a leadership gift",
   "a gift of 5 million dollars").
+- For cultivation, include one line on the philanthropic story when sourced:
+  a publicly stated reason for giving or a documented link between their life
+  story and a cause. Cite the record and date; stay within the chosen length.
 - Family: include a spouse or adult child only when public and relevant, for
   example a shared foundation, a joint named gift, or a spouse who co-leads the
   family business. Never include minors, health, or religion inferred from
   affiliations.
 - Tone: third person, past and present tense, plain words. Use "serves as", not
   "is a visionary leader". Adjectives only when a source uses them and you quote it.
-- No speculation. Do not write "likely", "is believed to", or anything about
-  wealth or motives.
+- No speculation. Do not write "likely" or "is believed to". Leave wealth out;
+  describe motives only when the person has stated them publicly.
 
 ### 5. Cite
 
