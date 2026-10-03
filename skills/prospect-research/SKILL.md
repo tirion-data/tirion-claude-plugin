@@ -310,6 +310,9 @@ they make the document decision-ready.
 
 ## Pitfalls
 
+- **Showing internal IDs.** Tirion profile and entity IDs are for tool calls only.
+  Never print one in the answer or the report; name the person and cite the
+  public records that identify them.
 - **Researching before identifying.** A common name plus a rich profile invites a
   merge of two people. Fix: anchors first, facts second.
 - **Reading silence as absence.** No linked property or filing is not proof the

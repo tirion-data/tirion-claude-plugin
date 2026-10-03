@@ -244,6 +244,9 @@ version when the environment supports it.
 
 ## Pitfalls
 
+- **Showing internal IDs.** Tirion profile and entity IDs are for tool calls only.
+  Never print one in the answer or the report; name the person and cite the
+  public records that identify them.
 - **Biography instead of strategy.** A CV does not prepare anyone for a
   conversation. Fix: objectives, talking points and the ask come first.
 - **A profile with no family, giving or contact sections.** Research shops
