@@ -71,9 +71,16 @@ Hand off:
    `source="sec"`, or `source="irs"` for a 990 object id.
    - Check `filing` against the requested document. Keep its `url` as the
      filing link and its `app_url` as the Tirion page link.
-   - Read `summary`, `callouts` and `how_to_read` before drawing conclusions.
-   - Use `beneficiaries` for money and timing, `connections` for ties stated
-     in the filing, and `people` for Tirion's person records.
+   - Start with `headline`, `company` (name, ticker, `business`) and
+     `what_happened`. They answer "who is the company and what happened" in
+     plain words. Then read `summary`, `callouts` and `how_to_read`.
+   - Use `beneficiaries` for money and timing, `timeline` for dated events
+     (a row with `estimate` true is a computed date such as a lock-up end, not
+     a disclosed one), `connections` for ties stated in the filing, and
+     `people` for Tirion's person records.
+   - `coverage` lists the parsed tables Tirion read for this filing (Form 4
+     transactions, 13D/G holders, Form D offering, proxy pay tables, S-1
+     holders). An empty list means the result rests on the filing text alone.
    - On failure, state the limitation. For SEC filings, read EDGAR manually
      using [sec-filing-analysis](../sec-filing-analysis/SKILL.md): select the
      form's tables, read transaction codes and footnotes, and cite the form,
@@ -86,7 +93,13 @@ Hand off:
 
 3. **Read the money by mechanism and timing.** For each beneficiary, read
    `role`, `how`, `description`, `amount_usd`, `amount_text`, `when`,
-   `timing` and `evidence` together.
+   `timing`, `section` and `evidence` together.
+   - `source` says where the row came from. A `parser` row was computed from
+     the filing's parsed tables; `computed.formula` shows the math (shares
+     times price) and `section` names the table and row. A `filing_text` row
+     is the AI's reading of the text, kept under the grounding rule in
+     `how_to_read`. Prefer a parser row when the two disagree.
+   - Cite `section` as the source in the money table.
    - Keep `realized`, `scheduled`, `contingent` and `unknown` labels visible.
      A realized award or transfer is not necessarily realized cash.
    - Separate cash received from stock value and amounts subject to future
@@ -104,8 +117,11 @@ Hand off:
    control. Do not assign all of a trust's or company's assets to one person.
    Do not count the same shares once for the person and again for the vehicle.
    Link beneficiaries to `people` by `entity_id`, not by name alone.
-   A null `entity_id` means no resolved Tirion profile. Keep that person
-   unresolved unless further evidence settles identity.
+   `profile_match.basis` says how the link was made: `filing_link` (Tirion's
+   resolver linked this filing's own row to the profile), `name_in_filing`
+   (an exact name match to a person this filing resolved; say "name match")
+   or `none`. A null `entity_id` means no resolved Tirion profile. Keep that
+   person unresolved unless further evidence settles identity.
 
 5. **Verify the one or two figures that drive the conclusion.** Open the
    original SEC filing on EDGAR. Check the table, footnote or exhibit behind
@@ -156,12 +172,19 @@ Confidential: for internal use by <organization> only.
 Prepared by <researcher>, with AI assistance. Unreviewed draft.
 
 **Filing:** <document key> | <original filing link> | <Tirion app_url, if returned>
+**Company:** <company.name (ticker): company.business>
+**What happened:** <what_happened, in one short paragraph>
 **Read:** <Who benefits, what is cash, and what remains conditional.>
 
 ## Who makes money
 | Person | How | How much | When | Source |
 |---|---|---|---|---|
-| <name; vehicle if relevant> | <mechanism; cash or paper> | <gross amount or not disclosed> | <date/period; timing label> | <filing link, table/footnote> |
+| <name; vehicle if relevant> | <mechanism; cash or paper> | <gross amount or not disclosed; formula for a parser row> | <date/period; timing label> | <section from the result, plus the filing link> |
+
+## Timeline
+| Date | Event | Source |
+|---|---|---|
+| <date, "(estimate)" when estimate is true> | <label> | <section> |
 
 ## People
 **<Name>** — <Role, employer and brief sourced bio.>
